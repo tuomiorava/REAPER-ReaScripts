@@ -1,23 +1,15 @@
-# ReaPack Repository Template
+# DoomSquirrel's ReaScripts for [Cockos REAPER](http://reaper.fm)
 
-A template for GitHub-hosted ReaPack repositories with automated
-[reapack-index](https://github.com/cfillion/reapack-index)
-running from GitHub Actions.
+----------
 
-Replace the name of the repository in [index.xml](/index.xml) when using this template.
-This will be the name shown in ReaPack.
+## Pack Content
+- Scripts written by DoomSquirrel
+- Scripts modded by DoomSquirrel
+- Scripts needed for other scripts on this repository
 
-```xml
-<index version="1" name="Name of your repository here">
-```
+## Manual Download Instructions
+- The whole archive: click the Download Master button.
+- For individual scripts: click on a script, then click on the Raw button, then File > Save (via Menu, Right Click or CTRL/CMD +S).
 
-Replace the contents of this file ([README.md](/README.md)).
-This will be the text shown when using ReaPack's "About this repository" feature.
-
-reapack-index looks for package files in subfolders.
-The folder tree represents the package categories shown in ReaPack.
-
-Each package file is expected to begin with a metadata header.
-See [Packaging Documentation](https://github.com/cfillion/reapack-index/wiki/Packaging-Documentation) on reapack-index's wiki.
-
-The URL to import in ReaPack is [https://github.com/`<your username>`/`<repository name>`/raw/master/index.xml](https://github.com/cfillion/reapack-repository-template/raw/master/index.xml).
+## Support
+Please consider making a [donation](https://www.paypal.me/aslaktolonen) if you like my work and if you use some of these scripts in your projects.
