@@ -1,6 +1,6 @@
 -- @description DoomSquirrel_Reset vertical zoom (TCP)
 -- @author DoomSquirrel
--- @version 1.0
+-- @version 1.1
 -- @license GPL v3
 -- @about
 --   # Reset TCP vertical zoom
@@ -15,22 +15,21 @@
 -- @changelog
 --   v1.0 (2024-06-20)
 --   Initial release
+--   v1.1 (2024-07-12)
+--   Now uses command: 40110 (Action: "View: Toggle track zoom to minimum height") for zooming out.
 
 ----------------------------
 --- USER SETTINGS ----------
 ----------------------------
 
 ZOOM_LEVEL = 4; -- How many times to zoom in.
-MAX_ZOOM_OUT_LEVEL = 40; -- High enough to zoom all the way out (current Reaper max is 40)
 
 ----------------------------
 --- END OF USER SETTINGS ---
 ----------------------------
 
 -- Zoom all the way out vertically
-for i = 0, MAX_ZOOM_OUT_LEVEL-1 do
-  reaper.Main_OnCommand(40112, 0); -- Action: "zoom out vertically"
-end
+reaper.Main_OnCommand(40110, 0); -- Action: "View: Toggle track zoom to minimum height"
 
 -- Zoom back in vertically
 for i = 0, ZOOM_LEVEL-1 do
