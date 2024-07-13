@@ -2,14 +2,27 @@
 
 ----------
 
-## Pack Content
+## Contents
 - Scripts written by DoomSquirrel
 - Scripts modded by DoomSquirrel
 - Scripts needed for other scripts on this repository
 
+## Manual ReaPack Installation
+Add the link to this repo in the **_ReaPack "Import repositories..."_** window: [index.xml](https://github.com/tuomiorava/REAPER-ReaScripts/raw/master/index.xml) 
+
+```
+https://github.com/tuomiorava/REAPER-ReaScripts/raw/master/index.xml
+```
+
 ## Manual Download Instructions
-- The whole archive: click the Download Master button.
-- For individual scripts: click on a script, then click on the Raw button, then File > Save (via Menu, Right Click or CTRL/CMD +S).
+
+### All scripts
+- Click the **_Code > Download ZIP_** button.
+- Extract the archive and import any contained script to Reaper via:  **_Actions > Show Action List > New Action > Load ReaScript..._**
+### Individual scripts
+- Click on a script.
+- Click on the **_Download raw file_** button.
+- Import the downloaded script to Reaper via:  **_Actions > Show Action List > New Action > Load ReaScript..._**
 
 ## Support
-Please consider making a [donation](https://www.paypal.me/aslaktolonen) if you like my work and if you use some of these scripts in your projects.
+Please consider making a [donation](https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A) if you like my work and if you use some of these scripts in your projects.
