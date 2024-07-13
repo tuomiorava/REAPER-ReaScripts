@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="83c95d4b404f1dcd4a30bc5c8c8bf2331571418e">
+<index version="1" name="DoomSquirrel's Scripts" commit="f6b1c26e44a0b4ec6014bfc5c67e9dde62637b09">
   <category name="Tracks">
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
       <metadata>
@@ -27,6 +27,7 @@
 
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Toggle mute between selected tracks & track under mouse\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Switches track mute states between the selected track(s) and the track under mouse. Ensures that the selected track and the track under the mouse do not have the same mute state - so that you can toggle which one you're hearing.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\b Default Hotkey:} The key left of 1\par}
 }
 ]]></description>
         <link rel="website" href="http://iki.fi/atolonen">My music =</link>
