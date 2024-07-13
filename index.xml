@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="8ac50b6d90684b00aeae42d27ea38ca812a66fa8">
-  <category name="tracks/DoomSquirrel_Reset vertical zoom (TCP)">
+<index version="1" name="DoomSquirrel's Scripts" commit="cad41d7dfb39ff6af6ffa4bd582ca00576fa717d">
+  <category name="Tracks">
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -14,8 +14,9 @@
         <link rel="website" href="http://iki.fi/atolonen">My music =</link>
         <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
       </metadata>
-      <version name="1.1" author="DoomSquirrel" time="2024-07-12T16:51:04Z">
-        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/8ac50b6d90684b00aeae42d27ea38ca812a66fa8/tracks/DoomSquirrel_Reset%20vertical%20zoom%20(TCP)/DoomSquirrel_Reset%20vertical%20zoom%20(TCP).lua</source>
+      <version name="1.2" author="DoomSquirrel" time="2024-07-13T00:06:24Z">
+        <changelog><![CDATA[Now uses command: 40110 (Action: "View: Toggle track zoom to minimum height") for zooming out.]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/cad41d7dfb39ff6af6ffa4bd582ca00576fa717d/Tracks/DoomSquirrel_Reset%20vertical%20zoom%20(TCP).lua</source>
       </version>
     </reapack>
   </category>
@@ -29,15 +30,26 @@ Cockos REAPER
 }}}
 \par}
 {\pard \qc \f0 \sa180 \li0 \fi0 \emdash\emdash\emdash\emdash\emdash\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Pack Content\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Contents\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts written by DoomSquirrel\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts modded by DoomSquirrel\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts needed for other scripts on this repository\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Manual ReaPack Installation\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Add the link to this repo in the {\b {\i ReaPack "Import repositories..."}} window: {\field{\*\fldinst{HYPERLINK "https://github.com/tuomiorava/REAPER-ReaScripts/raw/master/index.xml"}}{\fldrslt{\ul
+index.xml
+}}}
+\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://github.com/tuomiorava/REAPER-ReaScripts/raw/master/index.xml\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Manual Download Instructions\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab The whole archive: click the Download Master button.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab For individual scripts: click on a script, then click on the Raw button, then File > Save (via Menu, Right Click or CTRL/CMD +S).\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs28 All scripts\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Click the {\b {\i Code > Download ZIP}} button.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Extract the archive and import any contained script to Reaper via: {\b {\i Actions > Show Action List > New Action > Load ReaScript...}}\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs28 Individual scripts\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Click on a script.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Click on the {\b {\i Download raw file}} button.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Import the downloaded script to Reaper via: {\b {\i Actions > Show Action List > New Action > Load ReaScript...}}\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Support\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Please consider making a {\field{\*\fldinst{HYPERLINK "https://www.paypal.me/aslaktolonen"}}{\fldrslt{\ul
+{\pard \ql \f0 \sa180 \li0 \fi0 Please consider making a {\field{\*\fldinst{HYPERLINK "https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A"}}{\fldrslt{\ul
 donation
 }}}
  if you like my work and if you use some of these scripts in your projects.\par}
