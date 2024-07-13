@@ -22,7 +22,7 @@
 --   This script works by muting tracks, so it won't interfere with soloed instrument tracks.
 --
 --   **Default Hotkey:** ALT + The key left of 1
--- @demo https://raw.githubusercontent.com/tuomiorava/REAPER-ReaScripts/master/DEMO/DEMO_DoomSquirrel_DRY SEND comparison (mute toggle).gif
+-- @screenshot https://raw.githubusercontent.com/tuomiorava/REAPER-ReaScripts/master/DEMO/DEMO_DoomSquirrel_DRY SEND comparison (mute toggle).gif
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
