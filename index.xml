@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="75781fbac28defef1b9b2744116c5ccf84dc5407">
+<index version="1" name="DoomSquirrel's Scripts" commit="a5d4c4bb4a7155054ad97604a47c6c9204f7f26f">
+  <category name="MIDI Editor">
+    <reapack name="DoomSquirrel_Randomize CC values for notes in last clicked lane.lua" type="script" desc="DoomSquirrel_Randomize CC values for notes in last clicked lane">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Randomize CC values for notes in last clicked lane\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Inserts/updates CC events with randomized values for notes in the last clicked cc lane. Useful for adding slight variation to existing values.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Check USER SETTINGS for configuration options.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\i See the screenshot for an example of how this script is meant to be used.}\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="screenshot">https://raw.githubusercontent.com/tuomiorava/REAPER-ReaScripts/master/DEMO/DEMO_DoomSquirrel_Randomize CC values for notes in last clicked lane.gif</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-14T12:55:18Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a5d4c4bb4a7155054ad97604a47c6c9204f7f26f/MIDI%20Editor/DoomSquirrel_Randomize%20CC%20values%20for%20notes%20in%20last%20clicked%20lane.lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="Tracks">
     <reapack name="DoomSquirrel_DRY SEND comparison (mute toggle).lua" type="script" desc="DoomSquirrel_DRY / SEND comparison (mute toggle)">
       <metadata>
