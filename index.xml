@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="a5d4c4bb4a7155054ad97604a47c6c9204f7f26f">
+<index version="1" name="DoomSquirrel's Scripts" commit="0704d702fd22d1382c6ea8dd15f315ac29657433">
+  <category name="Items Editing">
+    <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Open item in MIDI Editor with default zoom level\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Opens the selected media item in the MIDI Editor with a default zoom level.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Has 2 main operation modes (selectable with the OP_MODE User setting):\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Zoom to a DEFAULT level\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Zoom to show all CONTENT of the media item\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 If you want to use this as the default behaviour when double clicking a media item, set it in the Preferences: {\i {\b Options > Preferences > Mouse Modifiers > Media Item > double click > Default Action > Action list... > DoomSquirrel_Open item in midi editor with default zoom level.lua}}\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-15T07:47:42Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/0704d702fd22d1382c6ea8dd15f315ac29657433/Items%20Editing/DoomSquirrel_Open%20item%20in%20midi%20editor%20with%20default%20zoom%20level.lua</source>
+      </version>
+    </reapack>
+  </category>
   <category name="MIDI Editor">
     <reapack name="DoomSquirrel_Randomize CC values for notes in last clicked lane.lua" type="script" desc="DoomSquirrel_Randomize CC values for notes in last clicked lane">
       <metadata>
