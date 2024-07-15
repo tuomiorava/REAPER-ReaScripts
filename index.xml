@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="272c4376ba56f80a9db2120928696c862549d8d4">
+<index version="1" name="DoomSquirrel's Scripts" commit="e1eb83ba9fd197f1658cb6447625a6adba1e7a2c">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -14,6 +14,7 @@
 {\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Zoom to show all CONTENT of the media item\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 If the selected media item is not MIDI, runs a command defined in the NON_MIDI_ITEM_ACTION User setting (default: "40009" -- Action: "Show media Item/take properties..."). You can change this command to whatever you like.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 If you want to use this as the default behaviour when double clicking a media item, set it in the Preferences: {\i {\b Options > Preferences > Mouse Modifiers > Media Item > double click > Default Action > Action list... > DoomSquirrel_Open item in midi editor with default zoom level.lua}}\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\b Default Hotkey:} Alt + Shift + M\par}
 }
 ]]></description>
         <link rel="website" href="http://iki.fi/atolonen">My music =</link>
@@ -22,6 +23,10 @@
       <version name="1.0" author="DoomSquirrel" time="2024-07-15T07:47:42Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/0704d702fd22d1382c6ea8dd15f315ac29657433/Items%20Editing/DoomSquirrel_Open%20item%20in%20midi%20editor%20with%20default%20zoom%20level.lua</source>
+      </version>
+      <version name="1.1" author="DoomSquirrel" time="2024-07-15T08:20:59Z">
+        <changelog><![CDATA[+ Added NON_MIDI_ITEM_ACTION]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/e1eb83ba9fd197f1658cb6447625a6adba1e7a2c/Items%20Editing/DoomSquirrel_Open%20item%20in%20midi%20editor%20with%20default%20zoom%20level.lua</source>
       </version>
     </reapack>
   </category>
