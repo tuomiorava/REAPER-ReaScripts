@@ -19,16 +19,16 @@
 --   _**Options > Preferences > Mouse Modifiers > Media Item > double click > Default Action >
 --   Action list... > DoomSquirrel_Open item in midi editor with default zoom level.lua**_
 --
---**Default Hotkey:** Alt + Shift + M
+--   **Default Hotkey:** Alt + Shift + M
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
 --  My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.0
+-- @version 1.1
 -- @changelog
---   Initial release
+--   + Added NON_MIDI_ITEM_ACTION
 
 ----------------------------
 --- USER SETTINGS ----------
