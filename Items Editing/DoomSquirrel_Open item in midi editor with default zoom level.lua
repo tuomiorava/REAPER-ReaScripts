@@ -23,7 +23,7 @@
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
---  My music = http://iki.fi/atolonen
+--   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
 -- @version 1.1
