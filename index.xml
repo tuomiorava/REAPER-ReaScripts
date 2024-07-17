@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="4940bc838456239e7dfb3a35aabd94e1290a6c52">
+<index version="1" name="DoomSquirrel's Scripts" commit="f5efd4b43378912ade93ccbb378489710ed1833e">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -90,7 +90,8 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 #Performance Arm track for MIDI (sequential name) {\b Performance Arm} means:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Performance Arm track for MIDI (sequential name)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\b Performance Arm} means:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Arms the selected track for recording, sets its monitoring, and sets its input.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Unsets record arming, monitoring (and optionally sets the input to default) for the previously Performance Armed track(s).\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 The intended use for this action is to assign sequential hotkey ranges to it, for example: {\i Numeric Keys 1-0} or {\i Function Keys F1-F12}. Then, when you press the hotkey, it {\b {\i Performance Arms}} a track containing an instrument, and if the name of the track contains the string given in the TRACK_NAME_Q User setting, based on the sequential order of those tracks, disregarding other tracks.\par}
@@ -111,6 +112,10 @@
         <changelog><![CDATA[Updated packaging documentation]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/4940bc838456239e7dfb3a35aabd94e1290a6c52/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential%20name).lua</source>
       </version>
+      <version name="1.2" author="DoomSquirrel" time="2024-07-17T13:17:35Z">
+        <changelog><![CDATA[Updated packaging documentation]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/f5efd4b43378912ade93ccbb378489710ed1833e/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential%20name).lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (sequential).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (sequential)">
       <metadata>
@@ -118,7 +123,8 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 #Performance Arm track for MIDI (sequential) {\b Performance Arm} means:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Performance Arm track for MIDI (sequential)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\b Performance Arm} means:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Arms the selected track for recording, sets its monitoring, and sets its input.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Unsets record arming, monitoring (and optionally sets the input to default) for the previously Performance Armed track(s).\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 The intended use for this action is to assign sequential hotkey ranges to it, for example: {\i Numeric Keys 1-0} or {\i Function Keys F1-F12}. Then, when you press the hotkey, it {\b {\i Performance Arms}} a track containing an instrument based on the sequential order of those tracks, disregarding other tracks.\par}
@@ -139,6 +145,10 @@
         <changelog><![CDATA[Updated packaging documentation]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/4940bc838456239e7dfb3a35aabd94e1290a6c52/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
       </version>
+      <version name="1.2" author="DoomSquirrel" time="2024-07-17T13:17:35Z">
+        <changelog><![CDATA[Updated packaging documentation]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/f5efd4b43378912ade93ccbb378489710ed1833e/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
       <metadata>
@@ -146,7 +156,8 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 #Performance Arm track for MIDI (under mouse) {\b Performance Arm} means:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Performance Arm track for MIDI (under mouse)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\b Performance Arm} means:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Arms the selected track for recording, sets its monitoring, and sets its input.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Unsets record arming, monitoring (and optionally sets the input to default) for the previously Performance Armed track(s).\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Check USER SETTINGS for configuration options.\par}
@@ -163,6 +174,10 @@
       <version name="1.1" author="DoomSquirrel" time="2024-07-17T13:12:51Z">
         <changelog><![CDATA[Updated packaging documentation]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/4940bc838456239e7dfb3a35aabd94e1290a6c52/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
+      </version>
+      <version name="1.2" author="DoomSquirrel" time="2024-07-17T13:17:35Z">
+        <changelog><![CDATA[Updated packaging documentation]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/f5efd4b43378912ade93ccbb378489710ed1833e/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
