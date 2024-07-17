@@ -2,7 +2,7 @@
 -- @author DoomSquirrel
 -- @license GPL v3
 -- @about
---   #Performance Arm track for MIDI (under mouse)
+--   # Performance Arm track for MIDI (under mouse)
 --   **Performance Arm** means:
 --   - Arms the selected track for recording, sets its monitoring, and sets its input.
 --   - Unsets record arming, monitoring (and optionally sets the input to default) for the previously Performance Armed track(s).
@@ -16,7 +16,7 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.1
+-- @version 1.2
 -- @changelog
 --   Updated packaging documentation
 
