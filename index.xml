@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="f5efd4b43378912ade93ccbb378489710ed1833e">
+<index version="1" name="DoomSquirrel's Scripts" commit="64cb3857c32063bc8fe9eca4b592c0ca6023f1f7">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -116,6 +116,11 @@
         <changelog><![CDATA[Updated packaging documentation]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/f5efd4b43378912ade93ccbb378489710ed1833e/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential%20name).lua</source>
       </version>
+      <version name="1.3" author="DoomSquirrel" time="2024-07-17T22:56:20Z">
+        <changelog><![CDATA[Customizable rocord monitoring mode (RECMON_ACTIVE)
+Allow Performance Arming when project has only one track]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/64cb3857c32063bc8fe9eca4b592c0ca6023f1f7/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential%20name).lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (sequential).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (sequential)">
       <metadata>
@@ -149,6 +154,11 @@
         <changelog><![CDATA[Updated packaging documentation]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/f5efd4b43378912ade93ccbb378489710ed1833e/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
       </version>
+      <version name="1.3" author="DoomSquirrel" time="2024-07-17T22:56:20Z">
+        <changelog><![CDATA[Customizable rocord monitoring mode (RECMON_ACTIVE)
+Allow Performance Arming when project has only one track]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/64cb3857c32063bc8fe9eca4b592c0ca6023f1f7/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
       <metadata>
@@ -178,6 +188,10 @@
       <version name="1.2" author="DoomSquirrel" time="2024-07-17T13:17:35Z">
         <changelog><![CDATA[Updated packaging documentation]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/f5efd4b43378912ade93ccbb378489710ed1833e/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
+      </version>
+      <version name="1.3" author="DoomSquirrel" time="2024-07-17T22:56:20Z">
+        <changelog><![CDATA[Customizable rocord monitoring mode (RECMON_ACTIVE)]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/64cb3857c32063bc8fe9eca4b592c0ca6023f1f7/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
