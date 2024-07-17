@@ -40,12 +40,19 @@ RECINPUT_ACTIVE = 4096+0x7E0 -- Default = 4096+0x7E0: MIDI Keyboard: All Channel
 -- The input to set when un-Performance Arming previously active track
 RECINPUT_DEFAULT = nil -- Default = nil, 0: Input:Mono / In 1
 
+-- The record monitoring to set when Performance Arming a track
+RECMON_ACTIVE = 1 -- Default = 1: On
+
 -- The selected track idx (order number amongst all instrument tracks)
 SELECTED_IDX = nil -- When nil, gets the idx from the pressed hotkey
 
 ----------------------------
 --- END OF USER SETTINGS ---
 ----------------------------
+
+local function Msg(v)
+  reaper.ShowConsoleMsg(tostring(v).."\n")
+end
 
 function IsInstrument(track, fx)
   local fx_instr = reaper.TrackFX_GetInstrument(track)
@@ -109,7 +116,7 @@ function performanceArmTrack(selIdx)
 
       if (hasInst and tr_match_i == selIdx) then
         reaper.SetTrackUIRecArm(tr, 1, 0)
-        reaper.SetTrackUIInputMonitor(tr, 2, 0)
+        reaper.SetTrackUIInputMonitor(tr, RECMON_ACTIVE, 0)
 
         -- Set input if it wasn't already MIDI
         local i_RecInputVal = reaper.GetMediaTrackInfo_Value(tr, 'I_RECINPUT')
