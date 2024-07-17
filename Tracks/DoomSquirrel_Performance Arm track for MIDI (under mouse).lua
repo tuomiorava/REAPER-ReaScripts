@@ -9,16 +9,16 @@
 --
 --   Check USER SETTINGS for configuration options.
 --
---**Default Hotkey:** Ctrl + Shift + R
+--   **Default Hotkey:** Ctrl + Shift + R
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.0
+-- @version 1.1
 -- @changelog
---   Initial release
+--   Updated packaging documentation
 
 ----------------------------
 --- USER SETTINGS ----------

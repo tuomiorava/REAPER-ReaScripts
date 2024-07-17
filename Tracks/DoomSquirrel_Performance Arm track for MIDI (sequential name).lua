@@ -22,16 +22,16 @@
 --   For advanced modification of this script, you can customize the accepted key ranges in the **_getIdxByKey()_** function.
 --   Virtual-Key Codes reference: https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 --
---**Default Hotkey:** Numeric Keys 1-0 / Function Keys F1-F12
+--   **Default Hotkey:** Numeric Keys 1-0 / Function Keys F1-F12
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.0
+-- @version 1.1
 -- @changelog
---   Initial release
+--   Updated packaging documentation
 
 ----------------------------
 --- USER SETTINGS ----------
