@@ -101,7 +101,7 @@ function performanceArmTrack(selIdx)
   local tr_match_i = 0
   local trCount = reaper.CountTracks(0)
 
-  if (not selIdx or selIdx < 1 or selIdx >= trCount) then
+  if (not selIdx or selIdx < 1 or selIdx > trCount) then
     return
   end
 
