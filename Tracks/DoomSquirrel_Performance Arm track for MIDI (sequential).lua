@@ -27,9 +27,10 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.2
+-- @version 1.3
 -- @changelog
---   Updated packaging documentation
+--   Customizable rocord monitoring mode (RECMON_ACTIVE)
+--   Allow Performance Arming when project has only one track
 
 ----------------------------
 --- USER SETTINGS ----------
