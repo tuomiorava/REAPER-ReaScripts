@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="e1eb83ba9fd197f1658cb6447625a6adba1e7a2c">
+<index version="1" name="DoomSquirrel's Scripts" commit="42629bd684ece6d0ec6d3e859878e23d2a014c7a">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -82,6 +82,72 @@
       <version name="1.0" author="DoomSquirrel" time="2024-07-13T23:08:11Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/62cc26d4a2e6ab6698357f2e618ae7c96695e112/Tracks/DoomSquirrel_DRY%20SEND%20comparison%20(mute%20toggle).lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Performance Arm track for MIDI (sequential name).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (sequential name)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 #Performance Arm track for MIDI (sequential name) {\b Performance Arm} means:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Arms the selected track for recording, sets its monitoring, and sets its input.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Unsets record arming, monitoring (and optionally sets the input to default) for the previously Performance Armed track(s).\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The intended use for this action is to assign sequential hotkey ranges to it, for example: {\i Numeric Keys 1-0} or {\i Function Keys F1-F12}. Then, when you press the hotkey, it {\b {\i Performance Arms}} a track containing an instrument, and if the name of the track contains the string given in the TRACK_NAME_Q User setting, based on the sequential order of those tracks, disregarding other tracks.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 So, if you have 4 tracks, with tracks 2, 3 & 4 containing instruments, and with tracks 2 & 4 named "Instrument 1-perf" and "Instrument 2-perf" respectively, pressing 1 will Performance Arm track 2, and pressing 2 will Performance Arm track 4.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Check USER SETTINGS for configuration options.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 For advanced modification of this script, you can customize the accepted key ranges in the {\b {\i getIdxByKey()}} function. Virtual-Key Codes reference: https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-17T07:23:05Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/42629bd684ece6d0ec6d3e859878e23d2a014c7a/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential%20name).lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Performance Arm track for MIDI (sequential).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (sequential)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 #Performance Arm track for MIDI (sequential) {\b Performance Arm} means:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Arms the selected track for recording, sets its monitoring, and sets its input.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Unsets record arming, monitoring (and optionally sets the input to default) for the previously Performance Armed track(s).\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The intended use for this action is to assign sequential hotkey ranges to it, for example: {\i Numeric Keys 1-0} or {\i Function Keys F1-F12}. Then, when you press the hotkey, it {\b {\i Performance Arms}} a track containing an instrument based on the sequential order of those tracks, disregarding other tracks.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 So, if you have 4 tracks, with tracks 2 & 4 containing instruments, pressing 1 will Performance Arm track 2, and pressing 2 will Performance Arm track 4.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Check USER SETTINGS for configuration options.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 For advanced modification of this script, you can customize the accepted key ranges in the {\b {\i getIdxByKey()}} function. Virtual-Key Codes reference: https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-17T07:23:05Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/42629bd684ece6d0ec6d3e859878e23d2a014c7a/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 #Performance Arm track for MIDI (under mouse) {\b Performance Arm} means:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Arms the selected track for recording, sets its monitoring, and sets its input.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Unsets record arming, monitoring (and optionally sets the input to default) for the previously Performance Armed track(s).\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Check USER SETTINGS for configuration options.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-17T07:23:05Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/42629bd684ece6d0ec6d3e859878e23d2a014c7a/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
