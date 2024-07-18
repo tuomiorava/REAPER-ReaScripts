@@ -8,32 +8,57 @@
 --   - Unsets record arming, monitoring (and optionally sets the input to default) for the previously Performance Armed track(s).
 --
 --   The intended use for this action is to assign sequential hotkey ranges to it,
---   for example: _Numeric Keys 1-0_ or _Function Keys F1-F12_.
---   Then, when you press the hotkey, it **_Performance Arms_** a track containing an instrument
---   based on the sequential order of those tracks, disregarding other tracks.
+--   for example: _Numeric Keys 1-9_ or _Function Keys F1-F12_.
+--   Then, when you press the hotkey, it **_Performance Arms_** a track based on the sequential order of those tracks,
+--   and **_un-Performance Arms_** other tracks.
 --
---   So, if you have 4 tracks, with tracks 2 & 4 containing instruments,
---   pressing 1 will Performance Arm track 2, and pressing 2 will Performance Arm track 4.
+--   Optionally, checks which tracks contain an instrument, and if the name of the track contains a string when
+--   determining which tracks are allowed to be **_Performance Armed_**.
+--
+--   ## Examples:
+--   - If **_CHECK_INSTR = false_** and **_TRACK_NAME_Q = nil_**,
+--     pressing keys 1-9 will **_Performance Arm_** the track whose order number corresponds to the pressed key.
+--     It won't matter if any tracks contain instruments, or what the track names are.
+--   - If **_CHECK_INSTR = true_** and **_TRACK_NAME_Q = nil_**.
+--     If you have 4 tracks, with tracks 2 & 4 containing instruments.
+--     Pressing 1 will **_Performance Arm_** track 2, and pressing 2 will **_Performance Arm_** track 4.
+--     It won't matter what the track names are.
+--   - If **_CHECK_INSTR = false_** and **_TRACK_NAME_Q = "perf"_**.
+--     If you have tracks 2 & 3 named "Instrument 1-perf" and "Instrument 2-perf" respectively.
+--     Pressing 1 will **_Performance Arm_** track 2, and pressing 2 will **_Performance Arm_** track 3.
+--     It won't matter if any tracks contain instruments.
+--   - If **_CHECK_INSTR = true_** and **_TRACK_NAME_Q = "perf"_**.
+--     If you have 4 tracks, with tracks 2, 3 & 4 containing instruments,
+--     and with tracks 3 & 4 named "Instrument 1-perf" and "Instrument 2-perf" respectively.
+--     Pressing 1 will **_Performance Arm_** track 3, and pressing 2 will **_Performance Arm_** track 4.
 --
 --   Check USER SETTINGS for configuration options.
 --
 --   For advanced modification of this script, you can customize the accepted key ranges in the **_getIdxByKey()_** function.
 --   Virtual-Key Codes reference: https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 --
---   **Default Hotkey:** Numeric Keys 1-0 / Function Keys F1-F12
+--   **Default Hotkey:** Numeric Keys 1-9 / Function Keys F1-F12
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.4
+-- @version 1.5
 -- @changelog
---   Scroll track into view (customizable with the *_SCROLL_TRACK_TO_VIEW & *_ALWAYS_SCROLL_TO_* User Settings)
+--   Combined the 2 scripts "(sequential)" & "(sequential name)"
+--   Checking if track has instrument(s) is optional now
+--   Checking if track name contains TRACK_NAME_Q is optional now
 
 ----------------------------
 --- USER SETTINGS ----------
 ----------------------------
+
+-- Check if the track contains instrument(s)
+CHECK_INSTR = true -- If false, don't require the track to have instrument(s)
+
+-- The track name qualifier (this should appear somewhere in the track name)
+TRACK_NAME_Q = nil -- Default = "perf", If nil, don't check if track name contains this
 
 -- The input to set when Performance Arming a track
 RECINPUT_ACTIVE = 4096+0x7E0 -- Default = 4096+0x7E0: MIDI Keyboard: All Channels
@@ -171,13 +196,21 @@ function performanceArmTrack(selIdx)
     local tr = reaper.GetTrack(0, i)
 
     if (tr) then
-      local hasInst = HasInstrument(tr)
+      local _, trName = reaper.GetTrackName(tr)
+      local hasInst = false
 
-      if (hasInst) then
+      -- Whether to check if the track has instruments
+      if (CHECK_INSTR) then
+        hasInst = HasInstrument(tr)
+      else
+        hasInst = true;
+      end
+
+      if (hasInst and (not TRACK_NAME_Q or string.find(trName, TRACK_NAME_Q))) then
         tr_match_i = tr_match_i + 1
       end
 
-      if (hasInst and tr_match_i == selIdx) then
+      if (hasInst and tr_match_i == selIdx and (not TRACK_NAME_Q or string.find(trName, TRACK_NAME_Q))) then
         reaper.SetTrackUIRecArm(tr, 1, 0)
         reaper.SetTrackUIInputMonitor(tr, RECMON_ACTIVE, 0)
 
@@ -213,8 +246,6 @@ function performanceArmTrack(selIdx)
     end
   end
 end
-
-
 
 reaper.Undo_BeginBlock()
 if (not SELECTED_IDX) then
