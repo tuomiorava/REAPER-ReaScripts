@@ -27,10 +27,9 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.3
+-- @version 1.4
 -- @changelog
---   Customizable rocord monitoring mode (RECMON_ACTIVE)
---   Allow Performance Arming when project has only one track
+--   Scroll track into view (customizable with the *_SCROLL_TRACK_TO_VIEW & *_ALWAYS_SCROLL_TO_* User Settings)
 
 ----------------------------
 --- USER SETTINGS ----------
@@ -44,16 +43,18 @@ RECINPUT_DEFAULT = nil -- Default = nil, 0: Input:Mono / In 1
 -- The record monitoring to set when Performance Arming a track
 RECMON_ACTIVE = 1 -- Default = 1: On
 
+-- Whether to scroll the Performance Armed track into view
+TCP_SCROLL_TRACK_TO_VIEW = true -- For Track Control Panel
+TCP_ALWAYS_SCROLL_TO_TOP = false -- If true, always scrolls the Performance Armed track to the top of the arrange view. If false: only scrolls when the track is out of view
+MCP_SCROLL_TRACK_TO_VIEW = true -- For Mixer Control Panel
+MCP_ALWAYS_SCROLL_TO_LEFT = false -- If true, always scrolls the Performance Armed track to the left of the mixer view. If false: only scrolls when the track is out of view
+
 -- The selected track idx (order number amongst all instrument tracks)
 SELECTED_IDX = nil -- When nil, gets the idx from the pressed hotkey
 
 ----------------------------
 --- END OF USER SETTINGS ---
 ----------------------------
-
-local function Msg(v)
-  reaper.ShowConsoleMsg(tostring(v).."\n")
-end
 
 function IsInstrument(track, fx)
   local fx_instr = reaper.TrackFX_GetInstrument(track)
@@ -70,6 +71,67 @@ function HasInstrument(track)
 
   return false
 end
+
+function getClientWidth(hwnd)
+  local _, l, t, r, b = reaper.JS_Window_GetClientRect(hwnd)
+  return r-l
+end
+
+function getClientHeight(hwnd)
+  local _, l, t, r, b = reaper.JS_Window_GetClientRect(hwnd)
+  return b-t
+end
+
+function tcp_isTrackInView(track)
+  local arrangeHWND = reaper.JS_Window_FindChildByID(reaper.GetMainHwnd(), 0x3E8)
+  local arrange_height = getClientHeight(arrangeHWND)
+  local track_tcpy = reaper.GetMediaTrackInfo_Value(track, "I_TCPY")
+  local track_wndh = reaper.GetMediaTrackInfo_Value(track, "I_WNDH")
+
+  if (track_tcpy > 0 and (track_tcpy + track_wndh < arrange_height)) then
+    return true
+  else
+    return false
+  end
+end
+
+function mcp_isTrackInView(track)
+  local mixerHWND, _ = reaper.BR_Win32_GetMixerHwnd()
+  if (not mixerHWND) then
+    return false
+  end
+
+  -- Deduct Master track width from available mixer width
+  mtr_mcpw = 0
+  local mtrvis = reaper.GetMasterTrackVisibility()
+
+  if (mtrvis ~= 2) then
+    mtr_mcpw = reaper.GetMediaTrackInfo_Value(reaper.GetMasterTrack(0), "I_MCPW")
+  end
+
+  local track_mcpx = reaper.GetMediaTrackInfo_Value(track, "I_MCPX")
+  local track_mcpw = reaper.GetMediaTrackInfo_Value(track, "I_MCPW")
+  local mixer_width = getClientWidth(mixerHWND)
+
+  if (track_mcpx > 0 and (track_mcpx + track_mcpw < (mixer_width - mtr_mcpw))) then
+    return true
+  else
+    return false
+  end
+end
+
+function tcp_scrollTrackToTop(track)
+  reaper.PreventUIRefresh(1)
+
+  local arrangeHWND = reaper.JS_Window_FindChildByID(reaper.GetMainHwnd(), 0x3E8)
+  local _, scroll_pos = reaper.JS_Window_GetScrollInfo(arrangeHWND, "v")
+  local track_tcpy = reaper.GetMediaTrackInfo_Value(track, "I_TCPY")
+  reaper.JS_Window_SetScrollPos(arrangeHWND, "v", track_tcpy + scroll_pos)
+
+  reaper.PreventUIRefresh(-1)
+end
+
+
 
 function getIdxByKey()
 -- Note: Shortcut scope must be set to Normal or keys will not be detected!
@@ -124,6 +186,13 @@ function performanceArmTrack(selIdx)
         if (i_RecInputVal < 4096) then
           reaper.SetMediaTrackInfo_Value(tr, 'I_RECINPUT', RECINPUT_ACTIVE )
         end
+
+        if (TCP_SCROLL_TRACK_TO_VIEW and (TCP_ALWAYS_SCROLL_TO_TOP or not tcp_isTrackInView(tr))) then
+          tcp_scrollTrackToTop(tr)
+        end
+        if (MCP_SCROLL_TRACK_TO_VIEW and (MCP_ALWAYS_SCROLL_TO_LEFT or not mcp_isTrackInView(tr))) then
+          reaper.SetMixerScroll(tr)
+        end
       else
         local i_RecArmVal = reaper.GetMediaTrackInfo_Value(tr, 'I_RECARM')
         local i_RecMonVal = reaper.GetMediaTrackInfo_Value(tr, 'I_RECMON')
@@ -145,8 +214,12 @@ function performanceArmTrack(selIdx)
   end
 end
 
+
+
+reaper.Undo_BeginBlock()
 if (not SELECTED_IDX) then
   getIdxByKey()
 end
 
 performanceArmTrack(SELECTED_IDX)
+reaper.Undo_EndBlock("Performance Arm track for MIDI (sequential)", -1)
