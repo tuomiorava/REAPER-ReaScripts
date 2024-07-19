@@ -16,9 +16,9 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.4
+-- @version 1.5
 -- @changelog
---   Scroll track into view (customizable with the *_SCROLL_TRACK_TO_VIEW & *_ALWAYS_SCROLL_TO_* User Settings)
+--   Better Scrolling (options to scroll track to view or scroll track to top in TCP / left in MCP)
 
 ----------------------------
 --- USER SETTINGS ----------
@@ -36,7 +36,7 @@ RECMON_ACTIVE = 1 -- Default = 1: On
 TCP_SCROLL_TRACK_TO_VIEW = true -- For Track Control Panel
 TCP_ALWAYS_SCROLL_TO_TOP = false -- If true, always scrolls the Performance Armed track to the top of the arrange view. If false: only scrolls when the track is out of view
 MCP_SCROLL_TRACK_TO_VIEW = true -- For Mixer Control Panel
-TCP_ALWAYS_SCROLL_TO_LEFT = false -- If true, always scrolls the Performance Armed track to the left of the mixer view. If false: only scrolls when the track is out of view
+MCP_ALWAYS_SCROLL_TO_LEFT = false -- If true, always scrolls the Performance Armed track to the left of the mixer view. If false: only scrolls when the track is out of view
 
 ----------------------------
 --- END OF USER SETTINGS ---
@@ -95,13 +95,27 @@ function mcp_isTrackInView(track)
   end
 end
 
-function tcp_scrollTrackToTop(track)
+function tcp_scrollTrackToView(track, scrollToTop)
   reaper.PreventUIRefresh(1)
 
   local arrangeHWND = reaper.JS_Window_FindChildByID(reaper.GetMainHwnd(), 0x3E8)
   local _, scroll_pos = reaper.JS_Window_GetScrollInfo(arrangeHWND, "v")
   local track_tcpy = reaper.GetMediaTrackInfo_Value(track, "I_TCPY")
-  reaper.JS_Window_SetScrollPos(arrangeHWND, "v", track_tcpy + scroll_pos)
+
+  if (scrollToTop) then
+    -- Scroll track to top
+    reaper.JS_Window_SetScrollPos(arrangeHWND, "v", scroll_pos + track_tcpy)
+  else
+    -- scroll track to view (To bottom, if below bottom. To top, if above top)
+    local track_wndh = reaper.GetMediaTrackInfo_Value(track, "I_WNDH")
+    local arrange_height = getClientHeight(arrangeHWND)
+
+    if (track_tcpy + track_wndh >= arrange_height) then
+      reaper.JS_Window_SetScrollPos(arrangeHWND, "v", scroll_pos + track_tcpy + track_wndh - arrange_height)
+    else
+      reaper.JS_Window_SetScrollPos(arrangeHWND, "v", scroll_pos + track_tcpy)
+    end
+  end
 
   reaper.PreventUIRefresh(-1)
 end
@@ -129,7 +143,7 @@ function performanceArmTrack()
         end
 
         if (TCP_SCROLL_TRACK_TO_VIEW and (TCP_ALWAYS_SCROLL_TO_TOP or not tcp_isTrackInView(tr)) and mcctx == "mcp") then
-          tcp_scrollTrackToTop(tr)
+          tcp_scrollTrackToView(tr, TCP_ALWAYS_SCROLL_TO_TOP)
         end
         if (MCP_SCROLL_TRACK_TO_VIEW and (MCP_ALWAYS_SCROLL_TO_LEFT or not mcp_isTrackInView(tr)) and (mcctx == "tcp" or mcctx == "arrange")) then
           reaper.SetMixerScroll(tr)

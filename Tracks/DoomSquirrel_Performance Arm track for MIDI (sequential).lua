@@ -44,11 +44,9 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.5
+-- @version 1.6
 -- @changelog
---   Combined the 2 scripts "(sequential)" & "(sequential name)"
---   Checking if track has instrument(s) is optional now
---   Checking if track name contains TRACK_NAME_Q is optional now
+--   Better Scrolling (options to scroll track to view or scroll track to top in TCP / left in MCP)
 
 ----------------------------
 --- USER SETTINGS ----------
@@ -145,13 +143,27 @@ function mcp_isTrackInView(track)
   end
 end
 
-function tcp_scrollTrackToTop(track)
+function tcp_scrollTrackToView(track, scrollToTop)
   reaper.PreventUIRefresh(1)
 
   local arrangeHWND = reaper.JS_Window_FindChildByID(reaper.GetMainHwnd(), 0x3E8)
   local _, scroll_pos = reaper.JS_Window_GetScrollInfo(arrangeHWND, "v")
   local track_tcpy = reaper.GetMediaTrackInfo_Value(track, "I_TCPY")
-  reaper.JS_Window_SetScrollPos(arrangeHWND, "v", track_tcpy + scroll_pos)
+
+  if (scrollToTop) then
+    -- Scroll track to top
+    reaper.JS_Window_SetScrollPos(arrangeHWND, "v", scroll_pos + track_tcpy)
+  else
+    -- scroll track to view (To bottom, if below bottom. To top, if above top)
+    local track_wndh = reaper.GetMediaTrackInfo_Value(track, "I_WNDH")
+    local arrange_height = getClientHeight(arrangeHWND)
+
+    if (track_tcpy + track_wndh >= arrange_height) then
+      reaper.JS_Window_SetScrollPos(arrangeHWND, "v", scroll_pos + track_tcpy + track_wndh - arrange_height)
+    else
+      reaper.JS_Window_SetScrollPos(arrangeHWND, "v", scroll_pos + track_tcpy)
+    end
+  end
 
   reaper.PreventUIRefresh(-1)
 end
@@ -221,7 +233,7 @@ function performanceArmTrack(selIdx)
         end
 
         if (TCP_SCROLL_TRACK_TO_VIEW and (TCP_ALWAYS_SCROLL_TO_TOP or not tcp_isTrackInView(tr))) then
-          tcp_scrollTrackToTop(tr)
+          tcp_scrollTrackToView(tr, TCP_ALWAYS_SCROLL_TO_TOP)
         end
         if (MCP_SCROLL_TRACK_TO_VIEW and (MCP_ALWAYS_SCROLL_TO_LEFT or not mcp_isTrackInView(tr))) then
           reaper.SetMixerScroll(tr)
