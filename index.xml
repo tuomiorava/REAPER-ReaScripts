@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="c36fab415f8426b4f1677c239320d5471381a540">
+<index version="1" name="DoomSquirrel's Scripts" commit="21f0c718ce0b934aa2007b79d2b42fcb953f7706">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -136,6 +136,10 @@ Checking if track has instrument(s) is optional now
 Checking if track name contains TRACK_NAME_Q is optional now]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/c36fab415f8426b4f1677c239320d5471381a540/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
       </version>
+      <version name="1.6" author="DoomSquirrel" time="2024-07-19T23:26:28Z">
+        <changelog><![CDATA[Better Scrolling (options to scroll track to view or scroll track to top in TCP / left in MCP)]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/21f0c718ce0b934aa2007b79d2b42fcb953f7706/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
       <metadata>
@@ -173,6 +177,10 @@ Checking if track name contains TRACK_NAME_Q is optional now]]></changelog>
       <version name="1.4" author="DoomSquirrel" time="2024-07-18T12:11:22Z">
         <changelog><![CDATA[Scroll track into view (customizable with the *_SCROLL_TRACK_TO_VIEW & *_ALWAYS_SCROLL_TO_* User Settings)]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/7482e1d3f399880d7b25f5387f46ab612429c469/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
+      </version>
+      <version name="1.5" author="DoomSquirrel" time="2024-07-19T23:26:28Z">
+        <changelog><![CDATA[Better Scrolling (options to scroll track to view or scroll track to top in TCP / left in MCP)]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/21f0c718ce0b934aa2007b79d2b42fcb953f7706/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
