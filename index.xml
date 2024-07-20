@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="21f0c718ce0b934aa2007b79d2b42fcb953f7706">
+<index version="1" name="DoomSquirrel's Scripts" commit="fd7c5d8b6fd801e62749f5a0eb17a8741d7b3c14">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -140,6 +140,12 @@ Checking if track name contains TRACK_NAME_Q is optional now]]></changelog>
         <changelog><![CDATA[Better Scrolling (options to scroll track to view or scroll track to top in TCP / left in MCP)]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/21f0c718ce0b934aa2007b79d2b42fcb953f7706/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
       </version>
+      <version name="2.0" author="DoomSquirrel" time="2024-07-20T00:52:35Z">
+        <changelog><![CDATA[Better operating behaviour. Now, first seeks the track to Performance Arm. If it is found,
+un-Performance Arms all tracks, and afterwards Performance Arms the found track.
+Also, toggles the Performance Armed state of a track when operating on the same one multiple times.]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/fd7c5d8b6fd801e62749f5a0eb17a8741d7b3c14/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
       <metadata>
@@ -181,6 +187,12 @@ Checking if track name contains TRACK_NAME_Q is optional now]]></changelog>
       <version name="1.5" author="DoomSquirrel" time="2024-07-19T23:26:28Z">
         <changelog><![CDATA[Better Scrolling (options to scroll track to view or scroll track to top in TCP / left in MCP)]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/21f0c718ce0b934aa2007b79d2b42fcb953f7706/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
+      </version>
+      <version name="2.0" author="DoomSquirrel" time="2024-07-20T00:52:35Z">
+        <changelog><![CDATA[Better operating behaviour. Now, first seeks the track to Performance Arm. If it is found,
+un-Performance Arms all tracks, and afterwards Performance Arms the found track.
+Also, toggles the Performance Armed state of a track when operating on the same one multiple times.]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/fd7c5d8b6fd801e62749f5a0eb17a8741d7b3c14/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
