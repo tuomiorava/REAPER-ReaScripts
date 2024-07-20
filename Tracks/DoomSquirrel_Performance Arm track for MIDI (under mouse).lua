@@ -16,9 +16,11 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.5
+-- @version 2.0
 -- @changelog
---   Better Scrolling (options to scroll track to view or scroll track to top in TCP / left in MCP)
+--   Better operating behaviour. Now, first seeks the track to Performance Arm. If it is found,
+--   un-Performance Arms all tracks, and afterwards Performance Arms the found track.
+--   Also, toggles the Performance Armed state of a track when operating on the same one multiple times.
 
 ----------------------------
 --- USER SETTINGS ----------
@@ -123,7 +125,6 @@ end
 
 
 function performanceArmTrack()
-  local mcctx = reaper.BR_GetMouseCursorContext()
   local trCount = reaper.CountTracks(0)
 
   for i = 0, trCount do
@@ -133,39 +134,67 @@ function performanceArmTrack()
       local _, trName = reaper.GetTrackName(tr)
 
       if (trName == mouseTrName) then
-        reaper.SetTrackUIRecArm(tr, 1, 0)
-        reaper.SetTrackUIInputMonitor(tr, RECMON_ACTIVE, 0)
-
-        -- Set input if it wasn't already MIDI
-        local i_RecInputVal = reaper.GetMediaTrackInfo_Value(tr, 'I_RECINPUT')
-        if (i_RecInputVal < 4096) then
-          reaper.SetMediaTrackInfo_Value(tr, 'I_RECINPUT', RECINPUT_ACTIVE )
-        end
-
-        if (TCP_SCROLL_TRACK_TO_VIEW and (TCP_ALWAYS_SCROLL_TO_TOP or not tcp_isTrackInView(tr)) and mcctx == "mcp") then
-          tcp_scrollTrackToView(tr, TCP_ALWAYS_SCROLL_TO_TOP)
-        end
-        if (MCP_SCROLL_TRACK_TO_VIEW and (MCP_ALWAYS_SCROLL_TO_LEFT or not mcp_isTrackInView(tr)) and (mcctx == "tcp" or mcctx == "arrange")) then
-          reaper.SetMixerScroll(tr)
-        end
-      else
         local i_RecArmVal = reaper.GetMediaTrackInfo_Value(tr, 'I_RECARM')
         local i_RecMonVal = reaper.GetMediaTrackInfo_Value(tr, 'I_RECMON')
-
-        if (i_RecArmVal == 1) then
-          -- If track was Performance Armed (and wasn't MIDI), and RECINPUT_DEFAULT is set
-          -- set input to default
-          local i_RecInputVal = reaper.GetMediaTrackInfo_Value(tr, 'I_RECINPUT')
-          if (RECINPUT_DEFAULT and i_RecInputVal < 4096
-            and (i_RecMonVal == 1 or i_RecMonVal == 2)) then
-            reaper.SetMediaTrackInfo_Value(tr, 'I_RECINPUT', RECINPUT_DEFAULT)
-          end
-
-          reaper.SetTrackUIRecArm(tr, 0, 0)
-          reaper.SetTrackUIInputMonitor(tr, 0, 0)
+        if (i_RecArmVal == 1 and (i_RecMonVal == 1 or i_RecMonVal == 2)) then
+          doUnPerformanceArmTrack(tr)
+        else
+          unPerformanceArmTracks()
+          doPerformanceArmTrack(tr)
         end
       end
     end
+  end
+end
+
+function doPerformanceArmTrack(track)
+  local mcctx = reaper.BR_GetMouseCursorContext()
+  reaper.SetTrackUIRecArm(track, 1, 0)
+  reaper.SetTrackUIInputMonitor(track, RECMON_ACTIVE, 0)
+
+  -- Set input if it wasn't already MIDI
+  local i_RecInputVal = reaper.GetMediaTrackInfo_Value(track, 'I_RECINPUT')
+  if (i_RecInputVal < 4096) then
+    reaper.SetMediaTrackInfo_Value(track, 'I_RECINPUT', RECINPUT_ACTIVE )
+  end
+
+  if (TCP_SCROLL_TRACK_TO_VIEW and (TCP_ALWAYS_SCROLL_TO_TOP or not tcp_isTrackInView(track)) and mcctx == "mcp") then
+    tcp_scrollTrackToView(track, TCP_ALWAYS_SCROLL_TO_TOP)
+  end
+  if (MCP_SCROLL_TRACK_TO_VIEW and (MCP_ALWAYS_SCROLL_TO_LEFT or not mcp_isTrackInView(track)) and (mcctx == "tcp" or mcctx == "arrange")) then
+    reaper.SetMixerScroll(track)
+  end
+end
+
+function unPerformanceArmTracks()
+  --reaper.ClearAllRecArmed()
+
+  local trCount = reaper.CountTracks(0)
+
+  for i = 0, trCount do
+    local tr = reaper.GetTrack(0, i)
+
+    if (tr) then
+      doUnPerformanceArmTrack(tr)
+    end
+  end
+end
+
+function doUnPerformanceArmTrack(track)
+  local i_RecArmVal = reaper.GetMediaTrackInfo_Value(track, 'I_RECARM')
+  local i_RecMonVal = reaper.GetMediaTrackInfo_Value(track, 'I_RECMON')
+
+  if (i_RecArmVal == 1) then
+    -- If track was Performance Armed (and wasn't MIDI), and RECINPUT_DEFAULT is set
+    -- set input to default
+    local i_RecInputVal = reaper.GetMediaTrackInfo_Value(track, 'I_RECINPUT')
+    if (RECINPUT_DEFAULT and i_RecInputVal < 4096
+      and (i_RecMonVal == 1 or i_RecMonVal == 2)) then
+      reaper.SetMediaTrackInfo_Value(track, 'I_RECINPUT', RECINPUT_DEFAULT)
+    end
+
+    reaper.SetTrackUIRecArm(track, 0, 0)
+    reaper.SetTrackUIInputMonitor(track, 0, 0)
   end
 end
 
