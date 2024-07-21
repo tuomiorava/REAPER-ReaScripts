@@ -44,15 +44,17 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 2.0
+-- @version 2.1
 -- @changelog
---   Better operating behaviour. Now, first seeks the track to Performance Arm. If it is found,
---   un-Performance Arms all tracks, and afterwards Performance Arms the found track.
---   Also, toggles the Performance Armed state of a track when operating on the same one multiple times.
+--   Stop iterating for tracks to Performance Arm when the first match is found
+--   Code cleanup
 
 ----------------------------
 --- USER SETTINGS ----------
 ----------------------------
+
+-- The selected track idx (order number amongst all instrument tracks)
+SELECTED_IDX = nil -- When nil, gets the idx from the pressed hotkey
 
 -- Check if the track contains instrument(s)
 CHECK_INSTR = true -- If false, don't require the track to have instrument(s)
@@ -73,9 +75,6 @@ TCP_SCROLL_TRACK_TO_VIEW = true -- For Track Control Panel
 TCP_ALWAYS_SCROLL_TO_TOP = false -- If true, always scrolls the Performance Armed track to the top of the arrange view. If false: only scrolls when the track is out of view
 MCP_SCROLL_TRACK_TO_VIEW = true -- For Mixer Control Panel
 MCP_ALWAYS_SCROLL_TO_LEFT = false -- If true, always scrolls the Performance Armed track to the left of the mixer view. If false: only scrolls when the track is out of view
-
--- The selected track idx (order number amongst all instrument tracks)
-SELECTED_IDX = nil -- When nil, gets the idx from the pressed hotkey
 
 ----------------------------
 --- END OF USER SETTINGS ---
@@ -233,6 +232,8 @@ function performanceArmTrack(selIdx)
           unPerformanceArmTracks()
           doPerformanceArmTrack(tr)
         end
+
+        return
       end
     end
   end
