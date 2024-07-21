@@ -16,11 +16,9 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 2.0
+-- @version 2.1
 -- @changelog
---   Better operating behaviour. Now, first seeks the track to Performance Arm. If it is found,
---   un-Performance Arms all tracks, and afterwards Performance Arms the found track.
---   Also, toggles the Performance Armed state of a track when operating on the same one multiple times.
+--   Code cleanup
 
 ----------------------------
 --- USER SETTINGS ----------
@@ -142,6 +140,8 @@ function performanceArmTrack()
           unPerformanceArmTracks()
           doPerformanceArmTrack(tr)
         end
+
+        return
       end
     end
   end
