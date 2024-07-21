@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="fd7c5d8b6fd801e62749f5a0eb17a8741d7b3c14">
+<index version="1" name="DoomSquirrel's Scripts" commit="aa4603e6e54d3363cfb20fbb5a986d0ff0a000fb">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -146,6 +146,11 @@ un-Performance Arms all tracks, and afterwards Performance Arms the found track.
 Also, toggles the Performance Armed state of a track when operating on the same one multiple times.]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/fd7c5d8b6fd801e62749f5a0eb17a8741d7b3c14/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
       </version>
+      <version name="2.1" author="DoomSquirrel" time="2024-07-21T01:43:44Z">
+        <changelog><![CDATA[Stop iterating for tracks to Performance Arm when the first match is found
+Code cleanup]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/206eb91be185cf2e20ac7b779035f954070a6058/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
       <metadata>
@@ -193,6 +198,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
 un-Performance Arms all tracks, and afterwards Performance Arms the found track.
 Also, toggles the Performance Armed state of a track when operating on the same one multiple times.]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/fd7c5d8b6fd801e62749f5a0eb17a8741d7b3c14/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
+      </version>
+      <version name="2.1" author="DoomSquirrel" time="2024-07-21T01:44:00Z">
+        <changelog><![CDATA[Code cleanup]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/aa4603e6e54d3363cfb20fbb5a986d0ff0a000fb/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(under%20mouse).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
