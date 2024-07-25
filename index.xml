@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="aa4603e6e54d3363cfb20fbb5a986d0ff0a000fb">
+<index version="1" name="DoomSquirrel's Scripts" commit="ce7a83e62a3e74054be3b490cf07ca805e225ab1">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -107,6 +107,7 @@
 }
 ]]></description>
         <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="screenshot">https://raw.githubusercontent.com/tuomiorava/REAPER-ReaScripts/master/DEMO/DEMO_DoomSquirrel_Performance Arm track for MIDI (sequential)</link>
         <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
       </metadata>
       <version name="1.0" author="DoomSquirrel" time="2024-07-17T07:23:05Z">
