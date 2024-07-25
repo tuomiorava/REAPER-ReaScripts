@@ -45,10 +45,9 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 2.1
+-- @version 2.2
 -- @changelog
---   Stop iterating for tracks to Performance Arm when the first match is found
---   Code cleanup
+--   Added DEMO screenshot
 
 ----------------------------
 --- USER SETTINGS ----------
