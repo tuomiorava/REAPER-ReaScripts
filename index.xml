@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="ce7a83e62a3e74054be3b490cf07ca805e225ab1">
+<index version="1" name="DoomSquirrel's Scripts" commit="40c08c3b030aadc564eefb77fe754646bcc0a80d">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -151,6 +151,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Stop iterating for tracks to Performance Arm when the first match is found
 Code cleanup]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/206eb91be185cf2e20ac7b779035f954070a6058/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
+      <version name="2.2" author="DoomSquirrel" time="2024-07-25T07:33:32Z">
+        <changelog><![CDATA[Added DEMO screenshot]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/40c08c3b030aadc564eefb77fe754646bcc0a80d/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
