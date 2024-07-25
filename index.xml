@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="40c08c3b030aadc564eefb77fe754646bcc0a80d">
+<index version="1" name="DoomSquirrel's Scripts" commit="45363ef0eb6285c339923109287b035c9d38b8d9">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -50,6 +50,32 @@
       <version name="1.0" author="DoomSquirrel" time="2024-07-14T12:55:18Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a5d4c4bb4a7155054ad97604a47c6c9204f7f26f/MIDI%20Editor/DoomSquirrel_Randomize%20CC%20values%20for%20notes%20in%20last%20clicked%20lane.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Recording">
+    <reapack name="DoomSquirrel_Re-record bad take.lua" type="script" desc="DoomSquirrel_Re-record bad take">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Re-record bad take\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Deletes last recording & re-records. This script is meant for quick re-recording of a take with just one hotkey.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs28 Does 2 different things, depending on the play state:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs24 If recording:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Stops recording, deletes the recorded media, starts recording again.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs24 If NOT recording:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Deletes current take from item, starts recording again.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\b Default Hotkey:} Backspace / F12\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">Personal Website</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-25T11:42:56Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/45363ef0eb6285c339923109287b035c9d38b8d9/Recording/DoomSquirrel_Re-record%20bad%20take.lua</source>
       </version>
     </reapack>
   </category>
