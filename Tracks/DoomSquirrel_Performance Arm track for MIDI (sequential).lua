@@ -38,7 +38,7 @@
 --   Virtual-Key Codes reference: https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 --
 --   **Default Hotkey:** Numeric Keys 1-9 / Function Keys F1-F12
--- @screenshot https://raw.githubusercontent.com/tuomiorava/REAPER-ReaScripts/master/DEMO/DEMO_DoomSquirrel_Performance Arm track for MIDI (sequential)
+-- @screenshot https://raw.githubusercontent.com/tuomiorava/REAPER-ReaScripts/master/DEMO/DEMO_DoomSquirrel_Performance Arm track for MIDI (sequential).gif
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
