@@ -2,19 +2,19 @@
 -- @author DoomSquirrel
 -- @license GPL v3
 -- @about
---   # Zoom MIDI editor at mouse position to measures <MEASURE VALUE>
+--   # Zoom MIDI editor at mouse position to measures **_MEASURE VALUE_**
 --   You can change the measure value by renaming this script.
 --   The last number in the script name determines the measure value.
 --
---   Adapted from a script by juliansader = https://raw.githubusercontent.com/ReaTeam/ReaScripts/master/MIDI%20Editor/js_Zoom%20MIDI%20editor%20to%205%20measures%20at%20mouse%20position.lua
+--   Adapted from a [script by juliansader](https://raw.githubusercontent.com/ReaTeam/ReaScripts/master/MIDI%20Editor/js_Zoom%20MIDI%20editor%20to%205%20measures%20at%20mouse%20position.lua).
 --   All credit to him. I only added the option to set measures value via the script name.
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
 --   Personal Website http://iki.fi/atolonen
--- @version 1.0
+-- @version 1.1
 -- @changelog
---   Initial release
+--   Updated info
 
 -- Get the name of the script and parse the last word as number (= MEASURES)
 local name = ({reaper.get_action_context()})[2]:match("([^/\\_]+).lua$")
