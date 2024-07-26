@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="45363ef0eb6285c339923109287b035c9d38b8d9">
+<index version="1" name="DoomSquirrel's Scripts" commit="c3394e29552ad8b6cf4a3287778b9063176adfd9">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -50,6 +50,25 @@
       <version name="1.0" author="DoomSquirrel" time="2024-07-14T12:55:18Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a5d4c4bb4a7155054ad97604a47c6c9204f7f26f/MIDI%20Editor/DoomSquirrel_Randomize%20CC%20values%20for%20notes%20in%20last%20clicked%20lane.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Set velocity of selected notes to 96.lua" type="script" desc="DoomSquirrel_Set velocity of selected notes to 96">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Set velocity of selected notes to 96 \par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can change the velocity to set the notes to by renaming this script. The last number in the script name determines the velocity value.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Valid velocity values are between 1-127. Anything outside of this will be corrected to the closest valid value.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">Personal Website</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-26T23:00:32Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/c3394e29552ad8b6cf4a3287778b9063176adfd9/MIDI%20Editor/DoomSquirrel_Set%20velocity%20of%20selected%20notes%20to%2096.lua</source>
       </version>
     </reapack>
   </category>
