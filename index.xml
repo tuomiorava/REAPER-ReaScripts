@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="c3394e29552ad8b6cf4a3287778b9063176adfd9">
+<index version="1" name="DoomSquirrel's Scripts" commit="b9c9f8e2e9ecdbfa81aea56e1b0cb23ce8c14fb3">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -69,6 +69,78 @@
       <version name="1.0" author="DoomSquirrel" time="2024-07-26T23:00:32Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/c3394e29552ad8b6cf4a3287778b9063176adfd9/MIDI%20Editor/DoomSquirrel_Set%20velocity%20of%20selected%20notes%20to%2096.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Zoom MIDI editor at mouse position to measures 1.lua" type="script" desc="DoomSquirrel_Zoom MIDI editor at mouse position to measures 1">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Zoom MIDI editor at mouse position to measures \par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can change the measure value by renaming this script. The last number in the script name determines the measure value.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Adapted from a script by juliansader = https://raw.githubusercontent.com/ReaTeam/ReaScripts/master/MIDI%20Editor/js_Zoom%20MIDI%20editor%20to%205%20measures%20at%20mouse%20position.lua All credit to him. I only added the option to set measures value via the script name.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">Personal Website</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-26T23:33:32Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/b9c9f8e2e9ecdbfa81aea56e1b0cb23ce8c14fb3/MIDI%20Editor/DoomSquirrel_Zoom%20MIDI%20editor%20at%20mouse%20position%20to%20measures%201.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Zoom MIDI editor at mouse position to measures 16.lua" type="script" desc="DoomSquirrel_Zoom MIDI editor at mouse position to measures 16">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Zoom MIDI editor at mouse position to measures \par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can change the measure value by renaming this script. The last number in the script name determines the measure value.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Adapted from a script by juliansader = https://raw.githubusercontent.com/ReaTeam/ReaScripts/master/MIDI%20Editor/js_Zoom%20MIDI%20editor%20to%205%20measures%20at%20mouse%20position.lua All credit to him. I only added the option to set measures value via the script name.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">Personal Website</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-26T23:33:32Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/b9c9f8e2e9ecdbfa81aea56e1b0cb23ce8c14fb3/MIDI%20Editor/DoomSquirrel_Zoom%20MIDI%20editor%20at%20mouse%20position%20to%20measures%2016.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Zoom MIDI editor at mouse position to measures 2.lua" type="script" desc="DoomSquirrel_Zoom MIDI editor at mouse position to measures 2">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Zoom MIDI editor at mouse position to measures \par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can change the measure value by renaming this script. The last number in the script name determines the measure value.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Adapted from a script by juliansader = https://raw.githubusercontent.com/ReaTeam/ReaScripts/master/MIDI%20Editor/js_Zoom%20MIDI%20editor%20to%205%20measures%20at%20mouse%20position.lua All credit to him. I only added the option to set measures value via the script name.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">Personal Website</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-26T23:33:32Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/b9c9f8e2e9ecdbfa81aea56e1b0cb23ce8c14fb3/MIDI%20Editor/DoomSquirrel_Zoom%20MIDI%20editor%20at%20mouse%20position%20to%20measures%202.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Zoom MIDI editor at mouse position to measures 4.lua" type="script" desc="DoomSquirrel_Zoom MIDI editor at mouse position to measures 4">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Zoom MIDI editor at mouse position to measures \par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can change the measure value by renaming this script. The last number in the script name determines the measure value.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Adapted from a script by juliansader = https://raw.githubusercontent.com/ReaTeam/ReaScripts/master/MIDI%20Editor/js_Zoom%20MIDI%20editor%20to%205%20measures%20at%20mouse%20position.lua All credit to him. I only added the option to set measures value via the script name.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">Personal Website</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2024-07-26T23:33:32Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/b9c9f8e2e9ecdbfa81aea56e1b0cb23ce8c14fb3/MIDI%20Editor/DoomSquirrel_Zoom%20MIDI%20editor%20at%20mouse%20position%20to%20measures%204.lua</source>
       </version>
     </reapack>
   </category>
