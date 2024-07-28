@@ -32,6 +32,13 @@
 --     and with tracks 3 & 4 named "Instrument 1-perf" and "Instrument 2-perf" respectively.
 --     Pressing 1 will **_Performance Arm_** track 3, and pressing 2 will **_Performance Arm_** track 4.
 --
+--   You can set this script to **_Performance Arm_** a specific track by having it's number be the last element
+--   of the script's file name.
+--   For Example, naming the script: _DoomSquirrel_Performance Arm track for MIDI (sequential) 2.lua_ will
+--   **_Performance Arm_** the second track (that has an instrument, if **_CHECK_INSTR = true_**
+--   and/or whose name contains the string set in **_TRACK_NAME_Q_**). This is useful for making multiple copies
+--   of this script, assigning each to specific tracks, and setting the hotkeys for each script to be a MIDI note.
+--
 --   Check USER SETTINGS for configuration options.
 --
 --   For advanced modification of this script, you can customize the accepted key ranges in the **_getIdxByKey()_** function.
@@ -45,16 +52,16 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 2.2
+-- @version 2.3
 -- @changelog
---   Added DEMO screenshot
+--   Added functionality to get SELECTED_IDX from file name
 
 ----------------------------
 --- USER SETTINGS ----------
 ----------------------------
 
 -- The selected track idx (order number amongst all instrument tracks)
-SELECTED_IDX = nil -- When nil, gets the idx from the pressed hotkey
+SELECTED_IDX = nil -- When nil, gets the idx from the file name / pressed hotkey
 
 -- Check if the track contains instrument(s)
 CHECK_INSTR = true -- If false, don't require the track to have instrument(s)
@@ -79,6 +86,10 @@ MCP_ALWAYS_SCROLL_TO_LEFT = false -- If true, always scrolls the Performance Arm
 ----------------------------
 --- END OF USER SETTINGS ---
 ----------------------------
+
+local function Msg(v)
+  reaper.ShowConsoleMsg(tostring(v).."\n")
+end
 
 function IsInstrument(track, fx)
   local fx_instr = reaper.TrackFX_GetInstrument(track)
@@ -169,7 +180,11 @@ function tcp_scrollTrackToView(track, scrollToTop)
   reaper.PreventUIRefresh(-1)
 end
 
-
+function getIdxFromFileName()
+  -- Get the name of the script and parse the last word as number (= SELECTED_IDX)
+  local name = ({reaper.get_action_context()})[2]:match("([^/\\_]+).lua$")
+  SELECTED_IDX = tonumber(name:match("%d+$"))
+end
 
 function getIdxByKey()
 -- Note: Shortcut scope must be set to Normal or keys will not be detected!
@@ -291,7 +306,10 @@ end
 
 reaper.Undo_BeginBlock()
 if (not SELECTED_IDX) then
-  getIdxByKey()
+  getIdxFromFileName()
+  if (not SELECTED_IDX) then
+    getIdxByKey()
+  end
 end
 
 performanceArmTrack(SELECTED_IDX)
