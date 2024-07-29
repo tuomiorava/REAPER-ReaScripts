@@ -32,12 +32,12 @@
 --     and with tracks 3 & 4 named "Instrument 1-perf" and "Instrument 2-perf" respectively.
 --     Pressing 1 will **_Performance Arm_** track 3, and pressing 2 will **_Performance Arm_** track 4.
 --
---   You can set this script to **_Performance Arm_** a specific track by having it's number be the last element
---   of the script's file name.
---   For Example, naming the script: _DoomSquirrel_Performance Arm track for MIDI (sequential) 2.lua_ will
---   **_Performance Arm_** the second track (that has an instrument, if **_CHECK_INSTR = true_**
---   and/or whose name contains the string set in **_TRACK_NAME_Q_**). This is useful for making multiple copies
---   of this script, assigning each to specific tracks, and setting the hotkeys for each script to be a MIDI note.
+--   You can set this script to **_Performance Arm_** a specific track by having it's **_SELECTED_IDX (idx)_**
+--   and/or **_TRACK_NAME_Q (trq)_** in the script's file name.
+--   For Example, naming the script: _DoomSquirrel_Performance Arm track for MIDI (sequential) idx2 trq-perf.lua_ will
+--   **_Performance Arm_** the second track (that has an instrument, if **_CHECK_INSTR = true_**)
+--   and whose name contains **_-perf_**. This is useful for making multiple copies of this script,
+--   assigning each to specific track **_idx_** and **_trq_** matches, and setting the hotkeys for each script to be a different MIDI note.
 --
 --   Check USER SETTINGS for configuration options.
 --
@@ -52,22 +52,26 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 2.3
+-- @version 2.4
 -- @changelog
---   Added functionality to get SELECTED_IDX from file name
+--   Added functionality to get SELECTED_IDX (idx) and TRACK_NAME_Q (trq) from file name
 
 ----------------------------
 --- USER SETTINGS ----------
 ----------------------------
 
 -- The selected track idx (order number amongst all instrument tracks)
-SELECTED_IDX = nil -- When nil, gets the idx from the file name / pressed hotkey
+-- If nil, gets the idx from the file name / pressed hotkey
+SELECTED_IDX = nil
 
 -- Check if the track contains instrument(s)
-CHECK_INSTR = true -- If false, don't require the track to have instrument(s)
+-- If false, don't require the track to have instrument(s)
+CHECK_INSTR = true
 
 -- The track name qualifier (this should appear somewhere in the track name)
-TRACK_NAME_Q = nil -- Default = "perf", If nil, don't check if track name contains this
+-- If nil (and not specified in the file name), don't check if track name contains this
+-- If nil, try to get it from the file name.
+TRACK_NAME_Q = nil -- Default = "perf".
 
 -- The input to set when Performance Arming a track
 RECINPUT_ACTIVE = 4096+0x7E0 -- Default = 4096+0x7E0: MIDI Keyboard: All Channels
@@ -86,10 +90,6 @@ MCP_ALWAYS_SCROLL_TO_LEFT = false -- If true, always scrolls the Performance Arm
 ----------------------------
 --- END OF USER SETTINGS ---
 ----------------------------
-
-local function Msg(v)
-  reaper.ShowConsoleMsg(tostring(v).."\n")
-end
 
 function IsInstrument(track, fx)
   local fx_instr = reaper.TrackFX_GetInstrument(track)
@@ -180,10 +180,27 @@ function tcp_scrollTrackToView(track, scrollToTop)
   reaper.PreventUIRefresh(-1)
 end
 
-function getIdxFromFileName()
-  -- Get the name of the script and parse the last word as number (= SELECTED_IDX)
+function getParamsFromFileName()
+  -- Get the name of the script
   local name = ({reaper.get_action_context()})[2]:match("([^/\\_]+).lua$")
-  SELECTED_IDX = tonumber(name:match("%d+$"))
+
+  for token in string.gmatch(name, "[^%s]+") do
+    if (token:find("idx") ~= nil) then
+      -- Get SELECTED_IDX from file name ONLY if it has not been specified in USER SETTINGS
+      if (not SELECTED_IDX) then
+        SELECTED_IDX = tonumber(string.sub(token, 4))
+      end
+    elseif (token:find("trq") ~= nil) then
+      -- Get TRACK_NAME_Q from file name ONLY if it has not been specified in USER SETTINGS
+      if (not TRACK_NAME_Q) then
+        TRACK_NAME_Q = string.sub(token, 4)
+      end
+      -- When getting TRACK_NAME_Q from file name, set SELECTED_IDX to 1 if it is not already set
+      if (not SELECTED_IDX) then
+        SELECTED_IDX = 1
+      end
+    end
+  end
 end
 
 function getIdxByKey()
@@ -305,11 +322,9 @@ function doUnPerformanceArmTrack(track)
 end
 
 reaper.Undo_BeginBlock()
+getParamsFromFileName()
 if (not SELECTED_IDX) then
-  getIdxFromFileName()
-  if (not SELECTED_IDX) then
-    getIdxByKey()
-  end
+  getIdxByKey()
 end
 
 performanceArmTrack(SELECTED_IDX)
