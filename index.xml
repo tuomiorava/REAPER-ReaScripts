@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="f18afa98b979767912fed059176001087f3936da">
+<index version="1" name="DoomSquirrel's Scripts" commit="54e8f092e7c33d41d86b23391185726664f28a97">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -250,7 +250,7 @@ script by juliansader
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If {\b {\i CHECK_INSTR = true}} and {\b {\i TRACK_NAME_Q = nil}}. If you have 4 tracks, with tracks 2 & 4 containing instruments. Pressing 1 will {\b {\i Performance Arm}} track 2, and pressing 2 will {\b {\i Performance Arm}} track 4. It won't matter what the track names are.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If {\b {\i CHECK_INSTR = false}} and {\b {\i TRACK_NAME_Q = "perf"}}. If you have tracks 2 & 3 named "Instrument 1-perf" and "Instrument 2-perf" respectively. Pressing 1 will {\b {\i Performance Arm}} track 2, and pressing 2 will {\b {\i Performance Arm}} track 3. It won't matter if any tracks contain instruments.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If {\b {\i CHECK_INSTR = true}} and {\b {\i TRACK_NAME_Q = "perf"}}. If you have 4 tracks, with tracks 2, 3 & 4 containing instruments, and with tracks 3 & 4 named "Instrument 1-perf" and "Instrument 2-perf" respectively. Pressing 1 will {\b {\i Performance Arm}} track 3, and pressing 2 will {\b {\i Performance Arm}} track 4.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i Performance Arm}} a specific track by having it's number be the last element of the script's file name. For Example, naming the script: {\i DoomSquirrel_Performance Arm track for MIDI (sequential) 2.lua} will {\b {\i Performance Arm}} the second track (that has an instrument, if {\b {\i CHECK_INSTR = true}} and/or whose name contains the string set in {\b {\i TRACK_NAME_Q}}). This is useful for making multiple copies of this script, assigning each to specific tracks, and setting the hotkeys for each script to be a MIDI note.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i Performance Arm}} a specific track by having it's {\b {\i SELECTED_IDX (idx)}} and/or {\b {\i TRACK_NAME_Q (trq)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Performance Arm track for MIDI (sequential) idx2 trq-perf.lua} will {\b {\i Performance Arm}} the second track (that has an instrument, if {\b {\i CHECK_INSTR = true}}) and whose name contains {\b {\i -perf}}. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i idx}} and {\b {\i trq}} matches, and setting the hotkeys for each script to be a different MIDI note.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Check USER SETTINGS for configuration options.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 For advanced modification of this script, you can customize the accepted key ranges in the {\b {\i getIdxByKey()}} function. Virtual-Key Codes reference: https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 {\b Default Hotkey:} Numeric Keys 1-9 / Function Keys F1-F12\par}
@@ -309,6 +309,10 @@ Code cleanup]]></changelog>
       <version name="2.3" author="DoomSquirrel" time="2024-07-28T10:33:17Z">
         <changelog><![CDATA[Added functionality to get SELECTED_IDX from file name]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/f18afa98b979767912fed059176001087f3936da/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
+      <version name="2.4" author="DoomSquirrel" time="2024-07-29T12:27:21Z">
+        <changelog><![CDATA[Added functionality to get SELECTED_IDX (idx) and TRACK_NAME_Q (trq) from file name]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/54e8f092e7c33d41d86b23391185726664f28a97/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
