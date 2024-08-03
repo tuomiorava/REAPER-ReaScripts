@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="8682caba56f6f75cb01218cdaa05885566477e03">
+<index version="1" name="DoomSquirrel's Scripts" commit="c51bac942aee57f059d6450a60fc825ca71834c8">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -317,6 +317,10 @@ Code cleanup]]></changelog>
       <version name="2.5" author="DoomSquirrel" time="2024-08-03T10:08:44Z">
         <changelog><![CDATA[Updated funstionality: Get SELECTED_IDX (idx) and TRACK_NAME_Q (trq) from file name only if they're not already set in USER SETTINGS.]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/8682caba56f6f75cb01218cdaa05885566477e03/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
+      </version>
+      <version name="2.6" author="DoomSquirrel" time="2024-08-03T10:16:15Z">
+        <changelog><![CDATA[Better Undo message (includes TRACK_NAME_Q and SELECTED_IDX)]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/c51bac942aee57f059d6450a60fc825ca71834c8/Tracks/DoomSquirrel_Performance%20Arm%20track%20for%20MIDI%20(sequential).lua</source>
       </version>
     </reapack>
     <reapack name="DoomSquirrel_Performance Arm track for MIDI (under mouse).lua" type="script" desc="DoomSquirrel_Performance Arm track for MIDI (under mouse)">
