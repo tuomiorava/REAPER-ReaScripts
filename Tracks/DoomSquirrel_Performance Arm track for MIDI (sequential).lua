@@ -322,7 +322,11 @@ function doUnPerformanceArmTrack(track)
 end
 
 reaper.Undo_BeginBlock()
-getParamsFromFileName()
+-- Get params from file name, if not set in USER SETTINGS
+if (not SELECTED_IDX and not TRACK_NAME_Q) then
+    getParamsFromFileName()
+end
+-- Get param from pressed hotkey, if not already set
 if (not SELECTED_IDX) then
   getIdxByKey()
 end
