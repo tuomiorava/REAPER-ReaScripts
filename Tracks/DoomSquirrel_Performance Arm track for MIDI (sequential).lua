@@ -52,9 +52,9 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 2.4
+-- @version 2.5
 -- @changelog
---   Added functionality to get SELECTED_IDX (idx) and TRACK_NAME_Q (trq) from file name
+--   Updated funstionality: Get SELECTED_IDX (idx) and TRACK_NAME_Q (trq) from file name only if they're not already set in USER SETTINGS.
 
 ----------------------------
 --- USER SETTINGS ----------
