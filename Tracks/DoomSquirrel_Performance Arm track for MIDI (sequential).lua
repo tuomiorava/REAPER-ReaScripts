@@ -52,9 +52,9 @@
 --   My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 2.5
+-- @version 2.6
 -- @changelog
---   Updated funstionality: Get SELECTED_IDX (idx) and TRACK_NAME_Q (trq) from file name only if they're not already set in USER SETTINGS.
+--   Better Undo message (includes TRACK_NAME_Q and SELECTED_IDX)
 
 ----------------------------
 --- USER SETTINGS ----------
@@ -332,4 +332,4 @@ if (not SELECTED_IDX) then
 end
 
 performanceArmTrack(SELECTED_IDX)
-reaper.Undo_EndBlock("Performance Arm track for MIDI (sequential)", -1)
+reaper.Undo_EndBlock("Performance Arm track for MIDI (sequential)" .. (TRACK_NAME_Q and " \"" .. TRACK_NAME_Q .. "\""or "") .. (SELECTED_IDX and " " .. SELECTED_IDX or ""), -1)
