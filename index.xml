@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="ee8f77c2de609e43293da8089eb28f72099e7bd1">
+<index version="1" name="DoomSquirrel's Scripts" commit="12bfb9475a0dc0708e26ca96d5b09ffb7c08afd3">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Open item in MIDI Editor with default zoom level\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Open item in MIDI Editor with default zoom level\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Opens the selected media item in the MIDI Editor with a default zoom level.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Has 2 main operation modes (selectable with the OP_MODE User setting):\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Zoom to a DEFAULT level\par}
@@ -52,11 +52,11 @@
     </reapack>
     <reapack name="DoomSquirrel_Randomize CC values for notes in last clicked lane.lua" type="script" desc="DoomSquirrel_Randomize CC values for notes in last clicked lane">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Randomize CC values for notes in last clicked lane\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Randomize CC values for notes in last clicked lane\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Inserts/updates CC events with randomized values for notes in the last clicked cc lane. Useful for adding slight variation to existing values.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Check USER SETTINGS for configuration options.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 {\i See the screenshot for an example of how this script is meant to be used.}\par}
@@ -228,11 +228,11 @@ script by juliansader
   <category name="Tracks">
     <reapack name="DoomSquirrel_DRY SEND comparison (mute toggle).lua" type="script" desc="DoomSquirrel_DRY / SEND comparison (mute toggle)">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 DRY / SEND comparison (mute toggle)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 DRY / SEND comparison (mute toggle)\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 A script for A/B comparing sounds between the DRY track and SEND track(s).\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Has 2 main operation modes (selectable with the OP_MODE User setting):\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Compares between a SEND track {\b under mouse} and the DRY track\par}
@@ -243,12 +243,10 @@ script by juliansader
 {\pard \ql \f0 \sa180 \li0 \fi0 If the SEND FOLDER is under mouse/selected, does not change the mute state of its child tracks.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Requires a dedicated DRY track (into which all instrument tracks are routed before going to the master) named in the TRACK_DRY variable, and that all aux send tracks are under a folder track named in FOLDER_SEND variable.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 This script works by muting tracks, so it won't interfere with soloed instrument tracks.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 {\i See the screenshot for an example of how this script is meant to be used.}\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 {\b Default Hotkey:} ALT + The key left of 1\par}
 }
 ]]></description>
         <link rel="website" href="http://iki.fi/atolonen">My music =</link>
-        <link rel="screenshot">https://raw.githubusercontent.com/tuomiorava/REAPER-ReaScripts/master/DEMO/DEMO_DoomSquirrel_DRY SEND comparison (mute toggle).gif</link>
         <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
       </metadata>
       <version name="1.0" author="DoomSquirrel" time="2024-07-13T23:08:11Z">
@@ -400,11 +398,11 @@ Also, toggles the Performance Armed state of a track when operating on the same 
     </reapack>
     <reapack name="DoomSquirrel_Reset vertical zoom (TCP).lua" type="script" desc="DoomSquirrel_Reset vertical zoom (TCP)">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Reset TCP vertical zoom\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Reset TCP vertical zoom\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Reset vertical zoom of the TCP to the amount specified in the ZOOM_LEVEL variable\par}
 }
 ]]></description>
@@ -418,13 +416,12 @@ Also, toggles the Performance Armed state of a track when operating on the same 
     </reapack>
     <reapack name="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Toggle mute between selected tracks & track under mouse\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Toggle mute between selected tracks & track under mouse\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Switches track mute states between the selected track(s) and the track under mouse. Ensures that the selected track and the track under the mouse do not have the same mute state - so that you can toggle which one you're hearing.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 {\b Default Hotkey:} The key left of 1\par}
 }
 ]]></description>
         <link rel="website" href="http://iki.fi/atolonen">My music =</link>
@@ -547,14 +544,14 @@ Also, toggles the Performance Armed state of a track when operating on the same 
   <category name="View">
     <reapack name="DoomSquirrel_Hide &amp; show windows.lua" type="script" desc="DoomSquirrel_Hide &amp; show windows">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Hide & show windows\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Hide & show windows\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Hides and shows windows. Does this by moving them ouside of the visible screen ViewPort area (below bottom). Some VSTs are slow to open so this is a faster way of getting them out of the way / bringing them back into view.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Optionally, If any windows are already hidden by this script (below bottom Viewport area), shows all windows. Set with the CHECK_ANY_HIDDEN user setting.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Requires\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Requires\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Requires JS_ReascriptAPI\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 {\b Default Hotkey:} Ctrl + F11\par}
 }
