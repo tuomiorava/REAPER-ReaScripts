@@ -6,12 +6,10 @@
 --   Switches track mute states between the selected track(s) and the track under mouse.
 --   Ensures that the selected track and the track under the mouse do not have
 --   the same mute state - so that you can toggle which one you're hearing.
---
---   **Default Hotkey:** The key left of 1
 -- @repository
 --   https://github.com/tuomiorava/REAPER-ReaScripts
 -- @links
---   My music = http://iki.fi/atolonen
+--  My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
 -- @version 1.0
@@ -36,3 +34,4 @@ for i = 0, reaper.CountTracks(0) do
     end
   end
 end
+
