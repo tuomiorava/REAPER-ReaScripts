@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="c51bac942aee57f059d6450a60fc825ca71834c8">
+<index version="1" name="DoomSquirrel's Scripts" commit="398f9f7b1861c92f060c978552a8f810510329f7">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -179,16 +179,16 @@ script by juliansader
   <category name="Recording">
     <reapack name="DoomSquirrel_Re-record bad take.lua" type="script" desc="DoomSquirrel_Re-record bad take">
       <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 Re-record bad take\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Re-record bad take\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Deletes last recording & re-records. This script is meant for quick re-recording of a take with just one hotkey.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs28 Does 2 different things, depending on the play state:\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs24 If recording:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Does 2 different things, depending on the play state:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 If recording:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Stops recording, deletes the recorded media, starts recording again.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs24 If NOT recording:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel3 \b \fs24 If NOT recording:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Deletes current take from item, starts recording again.\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 {\b Default Hotkey:} Backspace / F12\par}
 }
@@ -199,6 +199,10 @@ script by juliansader
       <version name="1.0" author="DoomSquirrel" time="2024-07-25T11:42:56Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/45363ef0eb6285c339923109287b035c9d38b8d9/Recording/DoomSquirrel_Re-record%20bad%20take.lua</source>
+      </version>
+      <version name="1.1" author="DoomSquirrel" time="2026-07-15T10:50:06Z">
+        <changelog><![CDATA[Better handling of take deletion confirmation when not recording. Doesn't start recording, if previous take was not deleted. Improve retake behavior when playing by deleting active take, stopping playback, and starting recording.]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/398f9f7b1861c92f060c978552a8f810510329f7/Recording/DoomSquirrel_Re-record%20bad%20take.lua</source>
       </version>
     </reapack>
   </category>
@@ -438,34 +442,34 @@ Also, toggles the Performance Armed state of a track when operating on the same 
     </reapack>
   </category>
   <metadata>
-    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs36 DoomSquirrel's ReaScripts for {\field{\*\fldinst{HYPERLINK "http://reaper.fm"}}{\fldrslt{\ul
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 DoomSquirrel's ReaScripts for {\field{\*\fldinst{HYPERLINK "http://reaper.fm"}}{\fldrslt{\ul
 Cockos REAPER
 }}}
 \par}
 {\pard \qc \f0 \sa180 \li0 \fi0 \emdash\emdash\emdash\emdash\emdash\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Contents\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Contents\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts written by DoomSquirrel\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts modded by DoomSquirrel\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Scripts needed for other scripts on this repository\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Manual ReaPack Installation\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Manual ReaPack Installation\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Add the link to this repo in the {\b {\i ReaPack "Import repositories..."}} window: {\field{\*\fldinst{HYPERLINK "https://github.com/tuomiorava/REAPER-ReaScripts/raw/master/index.xml"}}{\fldrslt{\ul
 index.xml
 }}}
 \par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \f1 https://github.com/tuomiorava/REAPER-ReaScripts/raw/master/index.xml\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Manual Download Instructions\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs28 All scripts\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Manual Download Instructions\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 All scripts\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Click the {\b {\i Code > Download ZIP}} button.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Extract the archive and import any contained script to Reaper via: {\b {\i Actions > Show Action List > New Action > Load ReaScript...}}\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs28 Individual scripts\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Individual scripts\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Click on a script.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Click on the {\b {\i Download raw file}} button.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Import the downloaded script to Reaper via: {\b {\i Actions > Show Action List > New Action > Load ReaScript...}}\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 \b \fs32 Support\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Support\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 Please consider making a {\field{\*\fldinst{HYPERLINK "https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A"}}{\fldrslt{\ul
 donation
 }}}
