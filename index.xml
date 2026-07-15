@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="398f9f7b1861c92f060c978552a8f810510329f7">
+<index version="1" name="DoomSquirrel's Scripts" commit="ee8f77c2de609e43293da8089eb28f72099e7bd1">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -31,6 +31,25 @@
     </reapack>
   </category>
   <category name="MIDI Editor">
+    <reapack name="DoomSquirrel_Randomize CC values (selected).lua" type="script" desc="DoomSquirrel_Randomize CC values (selected)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Randomize CC values. Only affects selected CC values.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Useful for adding slight variation to existing values.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Check USER SETTINGS for configuration options.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2026-07-15T10:55:00Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="midi_editor">https://github.com/tuomiorava/REAPER-ReaScripts/raw/ee8f77c2de609e43293da8089eb28f72099e7bd1/MIDI%20Editor/DoomSquirrel_Randomize%20CC%20values%20(selected).lua</source>
+      </version>
+    </reapack>
     <reapack name="DoomSquirrel_Randomize CC values for notes in last clicked lane.lua" type="script" desc="DoomSquirrel_Randomize CC values for notes in last clicked lane">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -414,6 +433,114 @@ Also, toggles the Performance Armed state of a track when operating on the same 
       <version name="1.0" author="DoomSquirrel" time="2024-07-13T00:52:58Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/83c95d4b404f1dcd4a30bc5c8c8bf2331571418e/Tracks/DoomSquirrel_Toggle%20mute%20between%20selected%20tracks%20&amp;%20track%20under%20mouse.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Track volume MOUSE vol-0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2026-07-15T10:52:23Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol-0.1.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Track volume MOUSE vol0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2026-07-15T10:52:23Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol0.1.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Track volume SELECTED vol-0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2026-07-15T10:52:23Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol-0.1.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Track volume SELECTED vol0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2026-07-15T10:52:23Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol0.1.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Track volume trqMASTER vol-0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2026-07-15T10:52:23Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol-0.1.lua</source>
+      </version>
+    </reapack>
+    <reapack name="DoomSquirrel_Track volume trqMASTER vol0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
+}
+]]></description>
+        <link rel="website" href="http://iki.fi/atolonen">My music =</link>
+        <link rel="donation" href="https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A">Donate via PayPal</link>
+      </metadata>
+      <version name="1.0" author="DoomSquirrel" time="2026-07-15T10:52:23Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol0.1.lua</source>
       </version>
     </reapack>
   </category>
