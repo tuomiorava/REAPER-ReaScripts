@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="d71a58f4f19115189e3bbd2b54b068c29a8ceb71">
+<index version="1" name="DoomSquirrel's Scripts" commit="a1a55ebb4a269ebef49641c585373f180a656ad4">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -438,7 +438,7 @@ Also, toggles the Performance Armed state of a track when operating on the same 
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s) under the mouse by -0.1\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
 }
 ]]></description>
@@ -453,6 +453,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Fixed description]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol-0.1.lua</source>
       </version>
+      <version name="1.2" author="DoomSquirrel" time="2026-11-13T11:03:45Z">
+        <changelog><![CDATA[Updated about]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a1a55ebb4a269ebef49641c585373f180a656ad4/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol-0.1.lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Track volume MOUSE vol0.1.lua" type="script" desc="DoomSquirrel_Track volume MOUSE vol0.1">
       <metadata>
@@ -460,7 +464,7 @@ Also, toggles the Performance Armed state of a track when operating on the same 
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s) under the mouse by 0.1\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
 }
 ]]></description>
@@ -475,6 +479,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Fixed description]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol0.1.lua</source>
       </version>
+      <version name="1.2" author="DoomSquirrel" time="2026-11-13T11:03:45Z">
+        <changelog><![CDATA[Updated about]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a1a55ebb4a269ebef49641c585373f180a656ad4/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol0.1.lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Track volume SELECTED vol-0.1.lua" type="script" desc="DoomSquirrel_Track volume SELECTED vol-0.1">
       <metadata>
@@ -482,7 +490,7 @@ Also, toggles the Performance Armed state of a track when operating on the same 
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of selected track(s) by -0.1\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
 }
 ]]></description>
@@ -497,6 +505,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Fixed description]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol-0.1.lua</source>
       </version>
+      <version name="1.2" author="DoomSquirrel" time="2026-11-13T11:03:45Z">
+        <changelog><![CDATA[Updated about]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a1a55ebb4a269ebef49641c585373f180a656ad4/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol-0.1.lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Track volume SELECTED vol0.1.lua" type="script" desc="DoomSquirrel_Track volume SELECTED vol0.1">
       <metadata>
@@ -504,7 +516,7 @@ Also, toggles the Performance Armed state of a track when operating on the same 
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of selected track(s) by 0.1\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
 }
 ]]></description>
@@ -519,6 +531,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Fixed description]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol0.1.lua</source>
       </version>
+      <version name="1.2" author="DoomSquirrel" time="2026-11-13T11:03:45Z">
+        <changelog><![CDATA[Updated about]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a1a55ebb4a269ebef49641c585373f180a656ad4/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol0.1.lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Track volume trqMASTER vol-0.1.lua" type="script" desc="DoomSquirrel_Track volume trqMASTER vol-0.1">
       <metadata>
@@ -526,7 +542,7 @@ Also, toggles the Performance Armed state of a track when operating on the same 
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of the master track(s) by -0.1\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
 }
 ]]></description>
@@ -541,6 +557,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Fixed description]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol-0.1.lua</source>
       </version>
+      <version name="1.2" author="DoomSquirrel" time="2026-11-13T11:03:45Z">
+        <changelog><![CDATA[Updated about]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a1a55ebb4a269ebef49641c585373f180a656ad4/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol-0.1.lua</source>
+      </version>
     </reapack>
     <reapack name="DoomSquirrel_Track volume trqMASTER vol0.1.lua" type="script" desc="DoomSquirrel_Track volume trqMASTER vol0.1">
       <metadata>
@@ -548,7 +568,7 @@ Also, toggles the Performance Armed state of a track when operating on the same 
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of track(s)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Adjusts the volume of the master track(s) by 0.1\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 You can set this script to {\b {\i adjust volume}} of specific track(s) by having it's {\b {\i TRACK_NAME_Q (trq)}} and/or {\b {\i VOL_ADJUST (vol)}} in the script's file name. For Example, naming the script: {\i DoomSquirrel_Track volume trq-voltrack vol0.5 .lua} will {\b {\i adjust volume}} of the track(s) whose name contains {\b {\i -voltrack}} by the value of 0.5. This is useful for making multiple copies of this script, assigning each to specific track {\b {\i trq}} matches and volume values.\par}
 }
 ]]></description>
@@ -562,6 +582,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
       <version name="1.1" author="DoomSquirrel" time="2026-11-13T07:51:15Z">
         <changelog><![CDATA[Fixed description]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol0.1.lua</source>
+      </version>
+      <version name="1.2" author="DoomSquirrel" time="2026-11-13T11:03:45Z">
+        <changelog><![CDATA[Updated about]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/a1a55ebb4a269ebef49641c585373f180a656ad4/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol0.1.lua</source>
       </version>
     </reapack>
   </category>
