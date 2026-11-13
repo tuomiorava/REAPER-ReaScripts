@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="DoomSquirrel's Scripts" commit="12bfb9475a0dc0708e26ca96d5b09ffb7c08afd3">
+<index version="1" name="DoomSquirrel's Scripts" commit="d71a58f4f19115189e3bbd2b54b068c29a8ceb71">
   <category name="Items Editing">
     <reapack name="DoomSquirrel_Open item in midi editor with default zoom level.lua" type="script" desc="DoomSquirrel_Open item in MIDI Editor with default zoom level">
       <metadata>
@@ -432,7 +432,7 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/83c95d4b404f1dcd4a30bc5c8c8bf2331571418e/Tracks/DoomSquirrel_Toggle%20mute%20between%20selected%20tracks%20&amp;%20track%20under%20mouse.lua</source>
       </version>
     </reapack>
-    <reapack name="DoomSquirrel_Track volume MOUSE vol-0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+    <reapack name="DoomSquirrel_Track volume MOUSE vol-0.1.lua" type="script" desc="DoomSquirrel_Track volume MOUSE vol-0.1">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -449,8 +449,12 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol-0.1.lua</source>
       </version>
+      <version name="1.1" author="DoomSquirrel" time="2026-11-13T07:51:15Z">
+        <changelog><![CDATA[Fixed description]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol-0.1.lua</source>
+      </version>
     </reapack>
-    <reapack name="DoomSquirrel_Track volume MOUSE vol0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+    <reapack name="DoomSquirrel_Track volume MOUSE vol0.1.lua" type="script" desc="DoomSquirrel_Track volume MOUSE vol0.1">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -467,8 +471,12 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol0.1.lua</source>
       </version>
+      <version name="1.1" author="DoomSquirrel" time="2026-11-13T07:51:15Z">
+        <changelog><![CDATA[Fixed description]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20MOUSE%20vol0.1.lua</source>
+      </version>
     </reapack>
-    <reapack name="DoomSquirrel_Track volume SELECTED vol-0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+    <reapack name="DoomSquirrel_Track volume SELECTED vol-0.1.lua" type="script" desc="DoomSquirrel_Track volume SELECTED vol-0.1">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -485,8 +493,12 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol-0.1.lua</source>
       </version>
+      <version name="1.1" author="DoomSquirrel" time="2026-11-13T07:51:15Z">
+        <changelog><![CDATA[Fixed description]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol-0.1.lua</source>
+      </version>
     </reapack>
-    <reapack name="DoomSquirrel_Track volume SELECTED vol0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+    <reapack name="DoomSquirrel_Track volume SELECTED vol0.1.lua" type="script" desc="DoomSquirrel_Track volume SELECTED vol0.1">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -503,8 +515,12 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol0.1.lua</source>
       </version>
+      <version name="1.1" author="DoomSquirrel" time="2026-11-13T07:51:15Z">
+        <changelog><![CDATA[Fixed description]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20SELECTED%20vol0.1.lua</source>
+      </version>
     </reapack>
-    <reapack name="DoomSquirrel_Track volume trqMASTER vol-0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+    <reapack name="DoomSquirrel_Track volume trqMASTER vol-0.1.lua" type="script" desc="DoomSquirrel_Track volume trqMASTER vol-0.1">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -521,8 +537,12 @@ Also, toggles the Performance Armed state of a track when operating on the same 
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol-0.1.lua</source>
       </version>
+      <version name="1.1" author="DoomSquirrel" time="2026-11-13T07:51:15Z">
+        <changelog><![CDATA[Fixed description]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol-0.1.lua</source>
+      </version>
     </reapack>
-    <reapack name="DoomSquirrel_Track volume trqMASTER vol0.1.lua" type="script" desc="DoomSquirrel_Toggle mute between selected tracks &amp; track under mouse">
+    <reapack name="DoomSquirrel_Track volume trqMASTER vol0.1.lua" type="script" desc="DoomSquirrel_Track volume trqMASTER vol0.1">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -538,6 +558,10 @@ Also, toggles the Performance Armed state of a track when operating on the same 
       <version name="1.0" author="DoomSquirrel" time="2026-07-15T10:52:23Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/9de4b31f0ddb40d4542181c29a7955ac1850e42f/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol0.1.lua</source>
+      </version>
+      <version name="1.1" author="DoomSquirrel" time="2026-11-13T07:51:15Z">
+        <changelog><![CDATA[Fixed description]]></changelog>
+        <source main="main">https://github.com/tuomiorava/REAPER-ReaScripts/raw/d71a58f4f19115189e3bbd2b54b068c29a8ceb71/Tracks/DoomSquirrel_Track%20volume%20trqMASTER%20vol0.1.lua</source>
       </version>
     </reapack>
   </category>
