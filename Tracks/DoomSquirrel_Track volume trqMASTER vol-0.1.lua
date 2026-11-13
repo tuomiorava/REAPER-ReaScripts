@@ -2,11 +2,11 @@
 -- @author DoomSquirrel
 -- @license GPL v3
 -- @about
---   # Adjusts the volume of track(s)
+--   # Adjusts the volume of the master track(s) by -0.1
 --   
 --   You can set this script to **_adjust volume_** of specific track(s) by having it's 
 --   **_TRACK_NAME_Q (trq)_** and/or **_VOL_ADJUST (vol)_** in the script's file name.
---   For Example, naming the script: _DoomSquirrel_Track volume  trq-voltrack vol0.5 .lua_ will
+--   For Example, naming the script: _DoomSquirrel_Track volume trq-voltrack vol0.5 .lua_ will
 --   **_adjust volume_** of the track(s) whose name contains **_-voltrack_** by the value of 0.5.
 --   This is useful for making multiple copies of this script, assigning each to specific
 --   track **_trq_** matches and volume values.
@@ -16,9 +16,9 @@
 --  My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.1
+-- @version 1.2
 -- @changelog
---   Fixed description
+--   Updated about
 
 ----------------------------
 --- USER SETTINGS ----------

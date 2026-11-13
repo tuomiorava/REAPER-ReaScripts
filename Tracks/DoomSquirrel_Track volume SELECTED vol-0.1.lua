@@ -2,7 +2,7 @@
 -- @author DoomSquirrel
 -- @license GPL v3
 -- @about
---   # Adjusts the volume of track(s)
+--   # Adjusts the volume of selected track(s) by -0.1
 --   
 --   You can set this script to **_adjust volume_** of specific track(s) by having it's 
 --   **_TRACK_NAME_Q (trq)_** and/or **_VOL_ADJUST (vol)_** in the script's file name.
@@ -16,9 +16,9 @@
 --  My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.1
+-- @version 1.2
 -- @changelog
---   Fixed description
+--   Updated about
 
 ----------------------------
 --- USER SETTINGS ----------
