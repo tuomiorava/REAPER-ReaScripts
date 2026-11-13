@@ -1,4 +1,4 @@
--- @description DoomSquirrel_Toggle mute between selected tracks & track under mouse
+-- @description DoomSquirrel_Track volume SELECTED vol0.1
 -- @author DoomSquirrel
 -- @license GPL v3
 -- @about
@@ -16,9 +16,9 @@
 --  My music = http://iki.fi/atolonen
 -- @donation
 --   Donate via PayPal https://www.paypal.com/donate/?hosted_button_id=2BEA2GHZMAW9A
--- @version 1.0
+-- @version 1.1
 -- @changelog
---   Initial release
+--   Fixed description
 
 ----------------------------
 --- USER SETTINGS ----------
